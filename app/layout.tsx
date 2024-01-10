@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontFamily = Roboto({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={cn(fontFamily.className, "h-full bg-rose-100")}>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
