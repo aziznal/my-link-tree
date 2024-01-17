@@ -3,6 +3,7 @@ import {
   Github,
   LibraryBig,
   Linkedin,
+  Newspaper,
   PaintBucket,
   Swords,
   User,
@@ -37,9 +38,13 @@ export default function Home() {
             Linkedin
           </TreeLink>
         </li>
-      </ul>
 
-      <ul className="mt-12 flex flex-col gap-4">
+        <li>
+          <TreeLink icon={<Newspaper />} href="https://medium.com/@aziznal">
+            Medium
+          </TreeLink>
+        </li>
+
         <li>
           <TreeLink icon={<User />} href="https://aziznal.com">
             My Website
