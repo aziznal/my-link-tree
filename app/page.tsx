@@ -3,6 +3,8 @@ import {
   Github,
   LibraryBig,
   Linkedin,
+  LucideTestTube,
+  LucideTestTube2,
   Newspaper,
   PaintBucket,
   Swords,
@@ -47,9 +49,12 @@ export default function Home() {
 
         <li>
           <TreeLink icon={<User />} href="https://aziznal.com">
-            My Website
+            My Website (WIP)
           </TreeLink>
         </li>
+
+        {/* Projects  */}
+        <h1 className="font-bold text-center text-2xl mt-12">Projects</h1>
 
         <li>
           <TreeLink
@@ -83,7 +88,16 @@ export default function Home() {
             icon={<LibraryBig />}
             href="https://german-docs.aziznal.com"
           >
-            German Docs - Work in Progress
+            German Docs (WIP)
+          </TreeLink>
+        </li>
+
+        <li>
+          <TreeLink
+            icon={<LucideTestTube2 />}
+            href="https://lazy-loading.aziznal.com"
+          >
+            Lazy loading (infinite scroll) with React Query (WIP)
           </TreeLink>
         </li>
       </ul>
