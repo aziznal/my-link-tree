@@ -3,6 +3,8 @@ import {
   Github,
   LibraryBig,
   Linkedin,
+  LucideSmile,
+  LucideSmilePlus,
   LucideTestTube,
   LucideTestTube2,
   Newspaper,
@@ -97,7 +99,16 @@ export default function Home() {
             icon={<LucideTestTube2 />}
             href="https://lazy-loading.aziznal.com"
           >
-            Lazy loading (infinite scroll) with React Query (WIP)
+            Lazy loading (infinite scroll) with React Query
+          </TreeLink>
+        </li>
+
+        <li>
+          <TreeLink
+            icon={<LucideSmilePlus />}
+            href="https://emoji-picker.aziznal.com"
+          >
+            Emoji Picker with lazy loading, virtualization, and search
           </TreeLink>
         </li>
       </ul>
