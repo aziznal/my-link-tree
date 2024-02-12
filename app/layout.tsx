@@ -22,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="min-h-full">
-      <body className={cn(fontFamily.className, "h-full bg-rose-100")}>
+      <body
+        className={cn(fontFamily.className, "h-full text-zinc-100 bg-zinc-950")}
+      >
         {children}
         <Analytics />
         <SpeedInsights />
