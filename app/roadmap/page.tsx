@@ -21,6 +21,30 @@ export default function RoadmapPage() {
         <li>Something animated tastefully</li>
 
         <li>
+          Store variations of this page and make them accessible through a
+          little button somewhere in the footer
+        </li>
+
+        <li>
+          Make things appear in a slide-up animation as you scroll (but not
+          disappear again)
+        </li>
+
+        <li>
+          Make site vim-friendly (e.g. j/k to scroll, gg to go to top, etc.)
+        </li>
+
+        <li>Add a shortcut for ? to show all shortcuts</li>
+
+        <li>
+          Add a vim-style command prompt
+        </li>
+
+        <li>
+          Add Cmd/Ctrl+K command menu to allow access to various sections of the site
+        </li>
+
+        <li>
           Gradient that moves with cursor and lights up the background behind it
           (like on{" "}
           <Link href="https://brittanychiang.com">
