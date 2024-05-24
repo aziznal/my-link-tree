@@ -14,6 +14,7 @@ export default function Home() {
             alt="Abdulaziz Nal"
             width={96}
             height={96}
+            title="you will be missed, my friend"
           />
         </div>
 
