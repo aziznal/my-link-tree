@@ -113,6 +113,16 @@ export default function Home() {
         >
           Emoji Picker
         </ProjectLink>
+
+        <ProjectLink
+          href="https://samehnaal.com"
+          imageSrc="/previews/sameh-naal-com.png"
+          description={
+            "A very basic portfolio I made for my dad to showcase some of his work. Took about 2 hours to finish, including purchasing the domain and deploying the site."
+          }
+        >
+          Samehnaal.com
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
