@@ -123,6 +123,16 @@ export default function Home() {
         >
           Samehnaal.com
         </ProjectLink>
+
+        <ProjectLink
+          href="https://tag-input.aziznal.com"
+          imageSrc="/previews/tag-input.png"
+          description={
+            "A tag input made from scratch using React and TailwindCSS. It seemed quite difficult at the beginning, then turned out to be easy, then hard again. Was a lot of fun!"
+          }
+        >
+          Tag Input Demo
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
