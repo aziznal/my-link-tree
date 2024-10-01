@@ -133,6 +133,16 @@ export default function Home() {
         >
           Tag Input Demo
         </ProjectLink>
+
+        <ProjectLink
+          href="https://query-key-factory.aziznal.com/"
+          imageSrc="/previews/query-key-demo.png"
+          description={
+            "An interactive demo of how tanstack queries, query keys, stale data handling, and invalidation work and can be configured."
+          }
+        >
+          Tanstack Query Keys Demo
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
