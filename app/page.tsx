@@ -143,6 +143,16 @@ export default function Home() {
         >
           Tanstack Query Keys Demo
         </ProjectLink>
+
+        <ProjectLink
+          href="https://thai-number-generator.aziznal.com/"
+          imageSrc="/previews/thai-number-generator-demo.png"
+          description={
+            "A very simple thai number generator that I made to practice my thai numbers"
+          }
+        >
+          Thai Number Generator
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
