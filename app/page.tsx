@@ -153,6 +153,16 @@ export default function Home() {
         >
           Thai Number Generator
         </ProjectLink>
+
+        <ProjectLink
+          href="https://matrix-effect.aziznal.com/"
+          imageSrc="/"
+          description={
+            "A matrix-like scrolling text effect I made for fun (with some customization options)"
+          }
+        >
+          Thai Number Generator
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
