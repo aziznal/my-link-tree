@@ -23,7 +23,7 @@ export default function Home() {
           <span className="text-zinc-500">@aziznal</span>
         </span>
 
-        <span className="text-zinc-500">web developer</span>
+        <span className="text-zinc-500">Fullstack Web Developer</span>
       </div>
 
       <div className="mt-6 flex items-center justify-center gap-4">
@@ -156,12 +156,22 @@ export default function Home() {
 
         <ProjectLink
           href="https://matrix-effect.aziznal.com/"
-          imageSrc="/"
+          imageSrc="/previews/matrix-effect.jpeg"
           description={
-            "A matrix-like scrolling text effect I made for fun (with some customization options)"
+            "An unfinished matrix-like scrolling text effect I made for fun (with some customization options)"
           }
         >
-          Thai Number Generator
+          Matrix Effect
+        </ProjectLink>
+
+        <ProjectLink
+          href="https://priorities.aziznal.com"
+          imageSrc="/previews/priorities.png"
+          description={
+            "An app I made to help me flex some animation skills as well as try out the neubrutalism style. Oh, also trying to get my sh*t together I guess."
+          }
+        >
+          Priorities App
         </ProjectLink>
       </div>
 
