@@ -158,7 +158,7 @@ export default function Home() {
           href="https://matrix-effect.aziznal.com/"
           imageSrc="/previews/matrix-effect.jpeg"
           description={
-            "An unfinished matrix-like scrolling text effect I made for fun (with some customization options)"
+            "An matrix digital rain effect I made for fun (with some customization options)"
           }
         >
           Matrix Effect
@@ -172,6 +172,16 @@ export default function Home() {
           }
         >
           Priorities App
+        </ProjectLink>
+
+        <ProjectLink
+          href="https://i18n-in-nextjs.aziznal.com"
+          imageSrc="/previews/i18n-in-nextjs.png"
+          description={
+            "An exploration of exactly what i18n is in the web world and how it can be applied in various different server and client contexts"
+          }
+        >
+          i18n in Next.js
         </ProjectLink>
       </div>
 
