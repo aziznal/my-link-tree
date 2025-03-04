@@ -164,7 +164,7 @@ export default function Home() {
           Matrix Effect
         </ProjectLink>
 
-        <ProjectLink
+        {/* <ProjectLink
           href="https://priorities.aziznal.com"
           imageSrc="/previews/priorities.png"
           description={
@@ -172,7 +172,7 @@ export default function Home() {
           }
         >
           Priorities App
-        </ProjectLink>
+        </ProjectLink> */}
 
         <ProjectLink
           href="https://i18n-in-nextjs.aziznal.com"
