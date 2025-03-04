@@ -183,6 +183,16 @@ export default function Home() {
         >
           i18n in Next.js
         </ProjectLink>
+
+        <ProjectLink
+          href="https://tax-calc.aziznal.com"
+          imageSrc="/previews/tax-calc.png"
+          description={
+            "A tax calculator with support for multiple tax ranges and premade template"
+          }
+        >
+          Tax Calculator
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
