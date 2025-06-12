@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glass {
+  position: relative;
+
+  backdrop-filter: blur(8px);
+  background-color: oklch(0.1 0.2 230 / 0.1);
+  border-radius: 1rem;
+
+  --border-width: 2px;
+  --border-1: oklch(1 0 89.88 / 0.3);
+  --border-2: oklch(1 0 89.88 / 0.05);
+
+  &:not(.glass-no-hover) {
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: oklch(0.5 0.2 240 / 0.4);
+    }
+  }
+
+  box-shadow: inset 0 0px 8px 0 oklch(0 0 0 / 0.2);
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  border-radius: inherit;
+  border: var(--border-width) solid transparent;
+
+  background: linear-gradient(var(--border-1), var(--border-2)) border-box;
+
+  mask:
+    linear-gradient(black) border-box,
+    linear-gradient(black) padding-box;
+
+  mask-composite: subtract;
+}

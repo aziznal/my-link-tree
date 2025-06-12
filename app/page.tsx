@@ -1,3 +1,4 @@
+import { GlassContainer } from "@/components/GlassContainer";
 import { ProjectLink } from "@/components/ProjectLink";
 import SocialLink from "@/components/SocialLink";
 import { LucideBriefcase, LucideGithub, LucidePencil } from "lucide-react";
@@ -7,53 +8,48 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col mx-auto h-full items-stretch justify-center py-12 px-6 lg:px-0 lg:w-fit">
-      <div className="flex flex-col items-center justify-center">
-        <div className="w-[96px] h-[96px] rounded-full bg-zinc-900 border-[5px] border-zinc-800 overflow-clip">
-          <Image
-            src="/profile.jpeg"
-            alt="Abdulaziz Nal"
-            width={96}
-            height={96}
-            title="you will be missed, my friend"
-          />
+      <section className="w-fit mx-auto">
+        <GlassContainer className="p-4 mx-auto glass-no-hover">
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-[96px] h-[96px] rounded-full bg-zinc-900 border-[5px] border-zinc-800 overflow-clip">
+              <Image
+                src="/profile.jpeg"
+                alt="Abdulaziz Nal"
+                width={96}
+                height={96}
+                title="you will be missed, my friend"
+              />
+            </div>
+
+            <span className="mt-4">
+              Abdulaziz Nal &nbsp;
+              <span className="text-zinc-200">@aziznal</span>
+            </span>
+
+            <span className="text-zinc-300">Full-stack Web Developer</span>
+          </div>
+        </GlassContainer>
+
+        <div className="mt-6 flex items-center justify-center gap-4">
+          <SocialLink href="https://github.com/aziznal">
+            <LucideGithub size="20" /> Github
+          </SocialLink>
+
+          <SocialLink href="https://medium.com/@aziznal">
+            <LucidePencil size="20" /> Medium
+          </SocialLink>
+
+          <SocialLink href="https://linkedin.com/in/abdulaziz-nal">
+            <LucideBriefcase size="20" /> Linkedin
+          </SocialLink>
         </div>
-
-        <span className="mt-4">
-          Abdulaziz Nal &nbsp;
-          <span className="text-zinc-500">@aziznal</span>
-        </span>
-
-        <span className="text-zinc-500">Fullstack Web Developer</span>
-      </div>
-
-      <div className="mt-6 flex items-center justify-center gap-4">
-        <SocialLink
-          href="https://github.com/aziznal"
-          className="text-yellow-500"
-        >
-          <LucideGithub size="20" /> Github
-        </SocialLink>
-
-        <SocialLink
-          href="https://medium.com/@aziznal"
-          className="text-teal-500"
-        >
-          <LucidePencil size="20" /> Medium
-        </SocialLink>
-
-        <SocialLink
-          href="https://linkedin.com/in/abdulaziz-nal"
-          className="text-blue-500"
-        >
-          <LucideBriefcase size="20" /> Linkedin
-        </SocialLink>
-      </div>
+      </section>
 
       <h1 className="font-bold text-xl mt-16 mb-2">Projects</h1>
 
-      <hr className="border-zinc-600" />
+      <hr className="border-zinc-600 mb-6" />
 
-      <div className="mt-8 flex gap-8 flex-wrap items-center lg:grid lg:grid-cols-2 lg:gap-0 lg:justify-center">
+      <div className="flex gap-8 flex-col lg:grid lg:grid-cols-2 lg:justify-center">
         <ProjectLink
           href="https://custom-themes.aziznal.com"
           imageSrc="/previews/custom-themes.png"
