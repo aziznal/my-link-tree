@@ -18,8 +18,8 @@ export default function SocialLink({
       href={href}
       target="_blank"
       className={cn(
-        "hover:underline transition-all flex gap-2 items-center group border p-2 rounded-lg border-zinc-700 hover:bg-zinc-900 text-sm",
-        className
+        `glass transition-all text-zinc-100 flex gap-2 items-center group py-2.5 px-4 rounded-lg backdrop-blur-[6px] text-sm`,
+        className,
       )}
     >
       {children}

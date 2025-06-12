@@ -26,30 +26,26 @@ export function ProjectLink({
       href={href}
       className={cn(
         `
-      flex
-      justify-center
-      shrink-0
+            glass
+            flex
+            justify-center
+            shrink-0
 
-      lg:w-[500px]
-      w-full
+            lg:w-[500px]
+            w-full
 
-      gap-4
+            gap-4
 
-      lg:p-4
+            rounded-lg
 
-      rounded-lg
+            transition-all
 
-      transition-colors
-
-      hover:bg-zinc-900
-      focus:bg-zinc-900
-      active:bg-zinc-900
-    `,
-        className
+            p-4`,
+        className,
       )}
     >
       <div className="shrink-0 w-[160px] h-[130px] border border-zinc-600 rounded-lg flex items-center justify-center">
-        {!imageSrc && <LucideImage className="text-zinc-600" size="36" />}
+        {!imageSrc && <LucideImage className="text-zinc-300" size="36" />}
 
         {imageSrc && (
           <Image
@@ -65,7 +61,7 @@ export function ProjectLink({
       <div className="flex-1 flex flex-col gap-1">
         <span className="font-medium text-lg">{children}</span>
 
-        <p className="text-zinc-400 text-sm">{description}</p>
+        <p className="text-zinc-200 text-sm">{description}</p>
       </div>
     </Link>
   );

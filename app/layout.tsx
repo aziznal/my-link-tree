@@ -21,9 +21,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="min-h-full">
+    <html lang="en" className="min-h-full" style={{ perspective: 1 }}>
       <body
-        className={cn(fontFamily.className, "h-full text-zinc-100 bg-zinc-950")}
+        className={cn(fontFamily.className, "h-full text-white")}
+        style={{
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          background: `
+              linear-gradient( hsla(0, 0%, 0%, 0.3) ),
+              url(background.jpeg)
+          `,
+        }}
       >
         {children}
         <Analytics />
