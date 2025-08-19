@@ -193,6 +193,16 @@ export default function Home() {
         >
           Tax Calculator
         </ProjectLink>
+
+        <ProjectLink
+          href="https://streak-tracker.aziznal.com"
+          imageSrc="/previews/streak-tracker.png"
+          description={
+            "A github-like streak tracker with customization options"
+          }
+        >
+          Streak Tracker
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
