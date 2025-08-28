@@ -1,0 +1,67 @@
+/* Smooth elliptical float */
+@keyframes floatSmooth {
+  0% {
+    transform: translate(-50%, -50%) translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(40px, -30px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(0px, -60px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(-40px, -30px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0px, 0px);
+  }
+}
+
+/* Slow rotation */
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Float speeds */
+.blob-float-slow {
+  animation: floatSmooth 30s linear infinite;
+}
+.blob-float-medium {
+  animation: floatSmooth 20s linear infinite;
+}
+.blob-float-fast {
+  animation: floatSmooth 15s linear infinite;
+}
+
+/* Rotation speeds */
+.blob-rotate-slow {
+  animation: rotateSlow 60s linear infinite;
+}
+.blob-rotate-medium {
+  animation: rotateSlow 45s linear infinite;
+}
+.blob-rotate-fast {
+  animation: rotateSlow 30s linear infinite;
+}
+
+/* Utility: combine float + rotate */
+.blob-anim-slow {
+  animation:
+    floatSmooth 30s linear infinite,
+    rotateSlow 60s linear infinite;
+}
+.blob-anim-medium {
+  animation:
+    floatSmooth 20s linear infinite,
+    rotateSlow 45s linear infinite;
+}
+.blob-anim-fast {
+  animation:
+    floatSmooth 15s linear infinite,
+    rotateSlow 30s linear infinite;
+}

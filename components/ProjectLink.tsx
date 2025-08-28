@@ -25,7 +25,7 @@ export function ProjectLink({
       target="_blank"
       href={href}
       className={cn(
-        "flex justify-center shrink-0 lg:w-[500px] w-full gap-4 lg:p-4 rounded-lg hover:bg-zinc-800 focus:bg-zinc-800 active:bg-zinc-800",
+        "flex justify-center shrink-0 lg:w-[500px] w-full gap-4 lg:p-4 rounded-lg hover:bg-zinc-600/40 focus:bg-zinc-800 active:bg-zinc-800 transition-colors duration-75",
         className,
       )}
     >

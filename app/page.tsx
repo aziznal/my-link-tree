@@ -1,3 +1,4 @@
+import { ParallaxBlobBackground } from "@/components/ParallaxBlobBackground";
 import { ProjectLink } from "@/components/ProjectLink";
 import SocialLink from "@/components/SocialLink";
 import { LucideBriefcase, LucideGithub, LucidePencil } from "lucide-react";
@@ -6,7 +7,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col mx-auto h-full items-stretch justify-center py-12 px-6 lg:px-0 lg:w-fit">
+    <div className="flex flex-col mx-auto h-full items-stretch justify-center py-12 px-6 lg:px-0 lg:w-fit isolate">
+      <ParallaxBlobBackground />
+
       <div className="flex flex-col items-center justify-center">
         <div className="w-[96px] h-[96px] rounded-full bg-zinc-900 border-[5px] border-zinc-800 overflow-clip">
           <Image
