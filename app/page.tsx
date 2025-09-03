@@ -206,6 +206,16 @@ export default function Home() {
         >
           Streak Tracker
         </ProjectLink>
+
+        <ProjectLink
+          href="https://guitar-practice.aziznal.com"
+          imageSrc="/previews/guitar-practice-website.png"
+          description={
+            "A site I made to practice guitar with helpful tools and resources. I swear I'll start practicing soon."
+          }
+        >
+          Guitar practice website (wip)
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
