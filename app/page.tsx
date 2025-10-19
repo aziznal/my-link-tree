@@ -216,6 +216,16 @@ export default function Home() {
         >
           Guitar practice website (wip)
         </ProjectLink>
+
+        <ProjectLink
+          href="https://tanstack-forms.aziznal.com"
+          imageSrc="/previews/tanstack-forms.png"
+          description={
+            "A few examples implemented with the excellent tanstack forms library"
+          }
+        >
+          Tanstack forms examples
+        </ProjectLink>
       </div>
 
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
