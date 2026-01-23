@@ -1,7 +1,7 @@
 import { ParallaxBlobBackground } from "@/components/ParallaxBlobBackground";
 import { ProjectLink } from "@/components/ProjectLink";
 import SocialLink from "@/components/SocialLink";
-import { LucideBriefcase, LucideGithub, LucidePencil } from "lucide-react";
+import { LucideBriefcase, LucideGithub, LucideMail, LucidePencil } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ export default function Home() {
             alt="Abdulaziz Nal"
             width={96}
             height={96}
-            title="you will be missed, my friend"
+            title="old friend, dearly missed"
           />
         </div>
 
@@ -49,6 +49,13 @@ export default function Home() {
           className="text-blue-500"
         >
           <LucideBriefcase size="20" /> Linkedin
+        </SocialLink>
+
+        <SocialLink
+          href="mailto:abodenaal@gmail.com"
+          className="text-gray-200"
+        >
+          <LucideMail size="20" /> Email
         </SocialLink>
       </div>
 
