@@ -1,0 +1,4 @@
+- [ ] I need a hero, im callin out for a hero
+- [ ] make little garden for shiro on bottom
+- [ ] "i am a developer who enjoys making cool components and animations in his spare time"
+- [ ] link cv

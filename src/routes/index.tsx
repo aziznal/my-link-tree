@@ -1,18 +1,24 @@
-import { ParallaxBlobBackground } from "@/components/ParallaxBlobBackground";
-import { ProjectLink } from "@/components/ProjectLink";
-import SocialLink from "@/components/SocialLink";
-import { LucideBriefcase, LucideGithub, LucideMail, LucidePencil } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { BlobBackground } from '@/lib/BlobBackground/BlobBackground'
+import { ProjectLink } from '@/lib/components/ProjectLink'
+import SocialLink from '@/lib/components/SocialLink'
+import { createFileRoute } from '@tanstack/react-router'
+import {
+  LucideGithub,
+  LucidePencil,
+  LucideBriefcase,
+  LucideMail,
+} from 'lucide-react'
 
-export default function Home() {
+export const Route = createFileRoute('/')({ component: App })
+
+function App() {
   return (
     <div className="flex flex-col mx-auto h-full items-stretch justify-center py-12 px-6 lg:px-0 lg:w-fit isolate">
-      <ParallaxBlobBackground />
+      <BlobBackground />
 
       <div className="flex flex-col items-center justify-center">
         <div className="w-[96px] h-[96px] rounded-full bg-zinc-900 border-[5px] border-zinc-800 overflow-clip">
-          <Image
+          <img
             src="/profile.jpeg"
             alt="Abdulaziz Nal"
             width={96}
@@ -51,10 +57,7 @@ export default function Home() {
           <LucideBriefcase size="20" /> Linkedin
         </SocialLink>
 
-        <SocialLink
-          href="mailto:abodenaal@gmail.com"
-          className="text-gray-200"
-        >
+        <SocialLink href="mailto:abodenaal@gmail.com" className="text-gray-200">
           <LucideMail size="20" /> Email
         </SocialLink>
       </div>
@@ -68,7 +71,7 @@ export default function Home() {
           href="https://custom-themes.aziznal.com"
           imageSrc="/previews/custom-themes.png"
           description={
-            "Testing out how tailwind can be leveraged to create custom themes."
+            'Testing out how tailwind can be leveraged to create custom themes.'
           }
         >
           Custom Themes with Tailwind
@@ -78,7 +81,7 @@ export default function Home() {
           href="https://design-principles.aziznal.com"
           imageSrc="/previews/design-principles.png"
           description={
-            "A before and after comparison with an interactive site wreckingtoolbar for users to play with."
+            'A before and after comparison with an interactive site wreckingtoolbar for users to play with.'
           }
         >
           Interactive design principles
@@ -98,7 +101,7 @@ export default function Home() {
           href="https://german-docs.aziznal.com"
           imageSrc="/previews/german-docs.png"
           description={
-            "A site where I document some useful stuff for learning German."
+            'A site where I document some useful stuff for learning German.'
           }
         >
           German Docs
@@ -108,7 +111,7 @@ export default function Home() {
           href="https://lazy-loading.aziznal.com"
           imageSrc="/previews/lazy-loading.png"
           description={
-            "A couple of demos for lazy loading and infinite scroll withTanstack (a.k.a React) Query. "
+            'A couple of demos for lazy loading and infinite scroll withTanstack (a.k.a React) Query. '
           }
         >
           Lazy loading with React Query
@@ -118,7 +121,7 @@ export default function Home() {
           href="https://emoji-picker.aziznal.com"
           imageSrc="/previews/emoji-picker.png"
           description={
-            "Emoji Picker with lazy loading, virtualization, and search. Why? Because I had 20 hours to kill researching unicode standards. "
+            'Emoji Picker with lazy loading, virtualization, and search. Why? Because I had 20 hours to kill researching unicode standards. '
           }
         >
           Emoji Picker
@@ -128,7 +131,7 @@ export default function Home() {
           href="https://samehnaal.com"
           imageSrc="/previews/sameh-naal-com.png"
           description={
-            "A very basic portfolio I made for my dad to showcase some of his work. Took about 2 hours to finish, including purchasing the domain and deploying the site."
+            'A very basic portfolio I made for my dad to showcase some of his work. Took about 2 hours to finish, including purchasing the domain and deploying the site.'
           }
         >
           Samehnaal.com
@@ -138,7 +141,7 @@ export default function Home() {
           href="https://tag-input.aziznal.com"
           imageSrc="/previews/tag-input.png"
           description={
-            "A tag input made from scratch using React and TailwindCSS. It seemed quite difficult at the beginning, then turned out to be easy, then hard again. Was a lot of fun!"
+            'A tag input made from scratch using React and TailwindCSS. It seemed quite difficult at the beginning, then turned out to be easy, then hard again. Was a lot of fun!'
           }
         >
           Tag Input Demo
@@ -148,7 +151,7 @@ export default function Home() {
           href="https://query-key-factory.aziznal.com/"
           imageSrc="/previews/query-key-demo.png"
           description={
-            "An interactive demo of how tanstack queries, query keys, stale data handling, and invalidation work and can be configured."
+            'An interactive demo of how tanstack queries, query keys, stale data handling, and invalidation work and can be configured.'
           }
         >
           Tanstack Query Keys Demo
@@ -158,7 +161,7 @@ export default function Home() {
           href="https://thai-number-generator.aziznal.com/"
           imageSrc="/previews/thai-number-generator-demo.png"
           description={
-            "A very simple thai number generator that I made to practice my thai numbers"
+            'A very simple thai number generator that I made to practice my thai numbers'
           }
         >
           Thai Number Generator
@@ -168,7 +171,7 @@ export default function Home() {
           href="https://matrix-effect.aziznal.com/"
           imageSrc="/previews/matrix-effect.jpeg"
           description={
-            "An matrix digital rain effect I made for fun (with some customization options)"
+            'An matrix digital rain effect I made for fun (with some customization options)'
           }
         >
           Matrix Effect
@@ -188,7 +191,7 @@ export default function Home() {
           href="https://i18n-in-nextjs.aziznal.com"
           imageSrc="/previews/i18n-in-nextjs.png"
           description={
-            "An exploration of exactly what i18n is in the web world and how it can be applied in various different server and client contexts"
+            'An exploration of exactly what i18n is in the web world and how it can be applied in various different server and client contexts'
           }
         >
           i18n in Next.js
@@ -198,7 +201,7 @@ export default function Home() {
           href="https://tax-calc.aziznal.com"
           imageSrc="/previews/tax-calc.png"
           description={
-            "A tax calculator with support for multiple tax ranges and premade template"
+            'A tax calculator with support for multiple tax ranges and premade template'
           }
         >
           Tax Calculator
@@ -208,7 +211,7 @@ export default function Home() {
           href="https://streak-tracker.aziznal.com"
           imageSrc="/previews/streak-tracker.png"
           description={
-            "A github-like streak tracker with customization options"
+            'A github-like streak tracker with customization options'
           }
         >
           Streak Tracker
@@ -228,7 +231,7 @@ export default function Home() {
           href="https://tanstack-forms.aziznal.com"
           imageSrc="/previews/tanstack-forms.png"
           description={
-            "A few examples implemented with the excellent tanstack forms library"
+            'A few examples implemented with the excellent tanstack forms library'
           }
         >
           Tanstack forms examples
@@ -238,14 +241,14 @@ export default function Home() {
       <div className="text-center w-full mt-16 flex gap-1 items-center justify-center">
         <span>Made by</span>
 
-        <Link
+        <a
           href="https://github.com/aziznal/my-link-tree"
           target="_blank"
           className="flex gap-2 hover:text-rose-700 text-rose-500"
         >
           aziznal <LucideGithub />
-        </Link>
+        </a>
       </div>
     </div>
-  );
+  )
 }

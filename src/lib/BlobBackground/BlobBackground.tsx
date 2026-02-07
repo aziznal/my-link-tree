@@ -1,31 +1,29 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import "./styles.css";
+import React, { useEffect, useState } from 'react'
+import './blob-background.css'
 
 function randomPercent(min: number, max: number) {
-  return `${Math.floor(Math.random() * (max - min) + min)}%`;
+  return `${Math.floor(Math.random() * (max - min) + min)}%`
 }
 
 function randomSize(min: number, max: number) {
-  return `${Math.floor(Math.random() * (max - min) + min)}px`;
+  return `${Math.floor(Math.random() * (max - min) + min)}px`
 }
 
 function randomOpacity(min: number, max: number) {
-  return (Math.random() * (max - min) + min).toFixed(2);
+  return (Math.random() * (max - min) + min).toFixed(2)
 }
 
 type BlobConfig = {
-  top: string;
-  left: string;
-  size: string;
-  opacity: string;
-  color: string;
-  anim: string;
-};
+  top: string
+  left: string
+  size: string
+  opacity: string
+  color: string
+  anim: string
+}
 
-export const ParallaxBlobBackground: React.FC = () => {
-  const [blobs, setBlobs] = useState<BlobConfig[] | null>(null);
+export const BlobBackground: React.FC = () => {
+  const [blobs, setBlobs] = useState<BlobConfig[] | null>(null)
 
   useEffect(() => {
     // Generate random values only on client
@@ -35,29 +33,29 @@ export const ParallaxBlobBackground: React.FC = () => {
         left: randomPercent(0, 15),
         size: randomSize(400, 600),
         opacity: randomOpacity(0.2, 0.4),
-        color: "fill-pink-500",
-        anim: "blob-anim-slow",
+        color: 'fill-pink-500',
+        anim: 'blob-anim-slow',
       },
       {
         top: randomPercent(20, 45),
         left: randomPercent(15, 35),
         size: randomSize(400, 600),
         opacity: randomOpacity(0.2, 0.4),
-        color: "fill-violet-600",
-        anim: "blob-anim-medium",
+        color: 'fill-violet-600',
+        anim: 'blob-anim-medium',
       },
       {
         top: randomPercent(5, 25),
         left: randomPercent(30, 60),
         size: randomSize(400, 600),
         opacity: randomOpacity(0.2, 0.4),
-        color: "fill-cyan-500",
-        anim: "blob-anim-fast",
+        color: 'fill-cyan-500',
+        anim: 'blob-anim-fast',
       },
-    ]);
-  }, []);
+    ])
+  }, [])
 
-  if (!blobs) return null; // nothing on server, only render after mount
+  if (!blobs) return null // nothing on server, only render after mount
 
   return (
     <div className="z-[-1] fixed inset-0 pointer-events-none overflow-hidden">
@@ -83,5 +81,5 @@ export const ParallaxBlobBackground: React.FC = () => {
         </svg>
       ))}
     </div>
-  );
-};
+  )
+}

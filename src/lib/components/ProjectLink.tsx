@@ -1,17 +1,16 @@
-import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import { cn } from "@/lib/utils";
-import { LucideImage } from "lucide-react";
-import Image from "next/image";
+import { cn } from '@/lib/cn'
+import { LucideImage } from 'lucide-react'
+import { Link } from '@tanstack/react-router'
 
 type TreeLinkProps = {
-  children: ReactNode;
-  description: string;
-  href: string;
-  className?: string;
-  imageSrc?: string;
-};
+  children: ReactNode
+  description: string
+  href: string
+  className?: string
+  imageSrc?: string
+}
 
 export function ProjectLink({
   imageSrc,
@@ -23,9 +22,9 @@ export function ProjectLink({
   return (
     <Link
       target="_blank"
-      href={href}
+      to={href}
       className={cn(
-        "flex justify-center shrink-0 lg:w-[500px] w-full gap-4 lg:p-4 rounded-lg hover:bg-zinc-600/40 focus:bg-zinc-800 active:bg-zinc-800 transition-colors duration-75",
+        'flex justify-center shrink-0 lg:w-[500px] w-full gap-4 lg:p-4 rounded-lg hover:bg-zinc-600/40 focus:bg-zinc-800 active:bg-zinc-800 transition-colors duration-75',
         className,
       )}
     >
@@ -33,7 +32,7 @@ export function ProjectLink({
         {!imageSrc && <LucideImage className="text-zinc-600" size="36" />}
 
         {imageSrc && (
-          <Image
+          <img
             src={imageSrc}
             alt={description}
             width={180}
@@ -49,5 +48,5 @@ export function ProjectLink({
         <p className="text-zinc-400 text-sm">{description}</p>
       </div>
     </Link>
-  );
+  )
 }
