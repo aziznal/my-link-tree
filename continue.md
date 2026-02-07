@@ -2,3 +2,12 @@
 - [ ] make little garden for shiro on bottom
 - [ ] "i am a developer who enjoys making cool components and animations in his spare time"
 - [ ] link cv
+- [ ] archive old / irrelevant stuff
+- [ ] Add favicon
+- [ ] embed my project graveyard - port it here as a section
+- [ ] there are actually some cool projects I could add to a components showcase in the graveyard
+- [ ] create sections for projects:
+  - concept-exploration
+  - components
+  - fancy stuff / showcases
+- [ ] fix project images flicker (something about priority / lazy prop for img element)
