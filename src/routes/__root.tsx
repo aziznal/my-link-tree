@@ -15,7 +15,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: "Aziz's fancy site",
+        title: "Aziz Nal - Web Dev",
         description: 'A senior developer who does web',
       },
     ],
@@ -23,6 +23,10 @@ export const Route = createRootRoute({
       {
         rel: 'stylesheet',
         href: appCss,
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Recursive:wght@300..1000&display=swap',
       },
     ],
   }),

@@ -1,4 +1,4 @@
-- [ ] I need a hero, im callin out for a hero
+- [x] I need a hero, im callin out for a hero
 - [ ] make little garden for shiro on bottom
 - [ ] "i am a developer who enjoys making cool components and animations in his spare time"
 - [ ] link cv
@@ -10,4 +10,4 @@
   - concept-exploration
   - components
   - fancy stuff / showcases
-- [ ] fix project images flicker (something about priority / lazy prop for img element)
+- [x] fix project images flicker (something about priority / lazy prop for img element)

@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PingRouteImport } from './routes/ping'
+import { Route as OldRouteImport } from './routes/old'
 import { Route as IndexRouteImport } from './routes/index'
 
 const PingRoute = PingRouteImport.update({
   id: '/ping',
   path: '/ping',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OldRoute = OldRouteImport.update({
+  id: '/old',
+  path: '/old',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/old': typeof OldRoute
   '/ping': typeof PingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/old': typeof OldRoute
   '/ping': typeof PingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/old': typeof OldRoute
   '/ping': typeof PingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ping'
+  fullPaths: '/' | '/old' | '/ping'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ping'
-  id: '__root__' | '/' | '/ping'
+  to: '/' | '/old' | '/ping'
+  id: '__root__' | '/' | '/old' | '/ping'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  OldRoute: typeof OldRoute
   PingRoute: typeof PingRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/ping'
       fullPath: '/ping'
       preLoaderRoute: typeof PingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/old': {
+      id: '/old'
+      path: '/old'
+      fullPath: '/old'
+      preLoaderRoute: typeof OldRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  OldRoute: OldRoute,
   PingRoute: PingRoute,
 }
 export const routeTree = rootRouteImport

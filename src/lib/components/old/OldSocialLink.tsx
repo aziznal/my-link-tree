@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
+import { cn } from '../../cn'
 import { Link } from '@tanstack/react-router'
-import { cn } from '../cn'
 
-export function SocialLink({
+export function OldSocialLink({
   href,
   children,
   className,
@@ -16,7 +16,7 @@ export function SocialLink({
       to={href}
       target="_blank"
       className={cn(
-        'flex gap-2 items-center group border p-2.5 rounded-lg hover:bg-secondary font-lowres text-lg font-bold',
+        'flex gap-2 items-center group border p-2 rounded-lg border-zinc-700 hover:bg-zinc-800/60 text-sm',
         className,
       )}
     >
