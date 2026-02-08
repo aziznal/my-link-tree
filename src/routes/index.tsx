@@ -24,6 +24,8 @@ function App() {
             width={96}
             height={96}
             title="old friend, dearly missed"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
 

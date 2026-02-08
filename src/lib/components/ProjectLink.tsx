@@ -38,6 +38,8 @@ export function ProjectLink({
             width={180}
             height={180}
             className="rounded-lg object-cover w-full h-full"
+            decoding="async"
+            fetchPriority="high"
           />
         )}
       </div>
