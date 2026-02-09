@@ -11,3 +11,4 @@
   - components
   - fancy stuff / showcases
 - [x] fix project images flicker (something about priority / lazy prop for img element)
+- [ ] fidgeting area

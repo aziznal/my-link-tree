@@ -41,7 +41,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
 
-      <body className="h-full text-zinc-100 bg-zinc-950">
+      <body className="h-full">
         {children}
 
         <TanStackDevtools

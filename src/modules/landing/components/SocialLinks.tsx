@@ -4,6 +4,7 @@ import {
   LucidePencil,
   LucideBriefcase,
   LucideMail,
+  LucideNewspaper,
 } from 'lucide-react'
 
 export function SocialLinks() {
@@ -37,6 +38,10 @@ export function SocialLinks() {
 
         <SocialLink href="mailto:abodenaal@gmail.com" className="text-gray-200">
           <LucideMail size="20" /> Email
+        </SocialLink>
+
+        <SocialLink href="" className="text-gray-200">
+          <LucideNewspaper size="20" /> CV
         </SocialLink>
       </div>
     </div>
