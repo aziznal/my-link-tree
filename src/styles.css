@@ -3,6 +3,7 @@
 
 @theme {
   --color-background: var(--color-neutral-950);
+  --color-background-lighter: var(--color-neutral-900);
   --color-foreground: var(--color-neutral-100);
 
   --color-card: var(--color-neutral-900);
@@ -77,4 +78,15 @@
   @media (width >= 1400px) {
     max-width: 1400px;
   }
+}
+
+@utility threeD {
+  @apply shadow-[4px_4px] shadow-neutral-600 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0px_0px];
+}
+
+@utility text-glow {
+  @apply text-shadow-lg text-shadow-foreground/20;
+}
+@utility text-glow-sm {
+  @apply text-shadow-sm text-shadow-foreground/20;
 }

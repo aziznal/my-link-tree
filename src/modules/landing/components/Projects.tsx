@@ -1,15 +1,18 @@
+import { SectionTitle } from '@/lib/components/Headings'
 import { ProjectLink } from '@/lib/components/ProjectLink'
 
 export function Projects() {
   return (
     <div>
-      <h2 className="font-lowres text-3xl text-shadow-lg text-shadow-foreground/20 mb-4">
-        PROJECTS
-      </h2>
+      <SectionTitle>PROJECTS</SectionTitle>
 
-      <div className="grid grid-flow-dense gap-8" style={{
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))'
-      }}>
+      <div
+        className="grid grid-flow-dense gap-8 sm:gap-12"
+        style={{
+          gridTemplateColumns:
+            'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+        }}
+      >
         <ProjectLink
           href="https://custom-themes.aziznal.com"
           imageSrc="/previews/custom-themes.png"
@@ -34,7 +37,7 @@ export function Projects() {
           href="https://ne-zaman-askeriyeye-gidiyorsun.aziznal.com"
           imageSrc="/previews/military-service.png"
           description={
-            "A couple of dates to which I redirected my friends to when theyasked me when I'm going to my military service. "
+            "A couple of dates to which I redirected my friends to when they asked me when I'm going to my military service. "
           }
         >
           When am I going to my military service?

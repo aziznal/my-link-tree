@@ -16,7 +16,7 @@ export function SocialLink({
       to={href}
       target="_blank"
       className={cn(
-        'flex gap-2 items-center group border p-2.5 rounded-lg hover:bg-secondary font-lowres text-lg font-bold',
+        'flex gap-2 items-center group border p-2.5 rounded-lg font-lowres text-lg font-bold threeD',
         className,
       )}
     >
