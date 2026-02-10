@@ -46,7 +46,9 @@ export function ProjectLink({
           {children}
         </span>
 
-        <p className="text-balance text-muted-foreground text-sm">{description}</p>
+        <p className="text-balance text-muted-foreground text-sm">
+          {description}
+        </p>
       </div>
     </Link>
   )

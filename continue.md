@@ -1,11 +1,12 @@
 - [x] I need a hero, im callin out for a hero
 - [ ] make little garden for shiro on bottom
-- [ ] "i am a developer who enjoys making cool components and animations in his spare time"
+- [ ] write summary. "i am a developer who enjoys making cool components and animations in his spare time"
 - [ ] link cv
 - [ ] archive old / irrelevant stuff
-- [ ] Add favicon
+- [x] Add favicon
 - [ ] embed my project graveyard - port it here as a section
 - [ ] there are actually some cool projects I could add to a components showcase in the graveyard
+- [ ] Add finman to my projects
 - [ ] create sections for projects:
   - concept-exploration
   - components

@@ -42,7 +42,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
 
       <body>
-        <BgDecoration />
+        {/* <BgDecoration /> */}
 
         {children}
 
@@ -65,14 +65,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
 function BgDecoration() {
   return (
-    <div className="fixed inset-0 -z-10 w-full h-full">
+    <div className="fixed inset-0 -z-10 w-dvw h-dvh">
       <svg
-        className="w-full h-full"
+        className="w-[200dvw] h-[200dvh]"
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         viewBox="0 0 700 700"
-        width="700"
-        height="700"
         opacity="1"
       >
         <defs>
