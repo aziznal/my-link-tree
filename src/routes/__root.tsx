@@ -84,7 +84,7 @@ function BgDecoration() {
             height="140%"
             filterUnits="objectBoundingBox"
             primitiveUnits="userSpaceOnUse"
-            color-interpolation-filters="linearRGB"
+            colorInterpolationFilters="linearRGB"
           >
             <feTurbulence
               type="fractalNoise"
@@ -102,7 +102,7 @@ function BgDecoration() {
               surfaceScale="15"
               specularConstant="0.75"
               specularExponent="20"
-              lighting-color="#7957A8"
+              lightingColor="#7957A8"
               x="0%"
               y="0%"
               width="100%"
