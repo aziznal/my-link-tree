@@ -21,7 +21,7 @@ export function ProjectLink({
       target="_blank"
       to={href}
       className={cn(
-        'group flex rounded h-full gap-6 threeD backdrop-blur-sm transition-all shadow-accent/30 border items-center',
+        'group flex rounded h-full gap-6 threeD backdrop-blur-sm transition-all shadow-primary/40 hover:shadow-primary border items-center',
         className,
       )}
     >

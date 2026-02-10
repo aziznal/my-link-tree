@@ -6,7 +6,7 @@ import { Summary } from './Summary'
 export function LandingPage() {
   return (
     <div className="min-h-dvh container pb-24">
-      <div className="mb-12">
+      <div className="mb-12 mt-24">
         <Hero />
       </div>
 

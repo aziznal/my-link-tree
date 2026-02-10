@@ -2,7 +2,7 @@
 @import 'tw-animate-css';
 
 @theme {
-  --color-background: var(--color-neutral-950);
+  --color-background: oklch(from var(--color-neutral-950) calc(l * 1.2) c h);
   --color-background-lighter: var(--color-neutral-900);
   --color-foreground: var(--color-neutral-100);
 

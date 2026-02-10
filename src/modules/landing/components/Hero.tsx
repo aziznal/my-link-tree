@@ -18,7 +18,7 @@ export function Hero() {
   const formattedTime = `${now.current.getHours().toString().padStart(2, '0')}:${now.current.getMinutes().toString().padStart(2, '0')}:${now.current.getSeconds().toString().padStart(2, '0')}`
 
   return (
-    <div className="border mt-24 max-w-[80ch] bg-zinc-950">
+    <div className="border max-w-[80ch] backdrop-blur-xs bg-zinc-950/50">
       <div className="bg-secondary px-3 py-0.5 grid grid-cols-3 items-center">
         <div className="flex gap-1">
           <div className="h-[12px] w-[12px] bg-secondary rounded-full" />

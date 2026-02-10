@@ -11,9 +11,9 @@ import {
 export function SocialLinks() {
   return (
     <div>
-      <SectionTitle>LiNKS</SectionTitle>
+      <SectionTitle>links</SectionTitle>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 lowercase">
         <SocialLink
           href="https://github.com/aziznal"
           className="text-yellow-500"

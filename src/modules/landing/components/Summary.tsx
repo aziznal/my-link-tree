@@ -7,9 +7,9 @@ export function Summary() {
 
   return (
     <div>
-      <SectionTitle>A BIT ABOUT ME</SectionTitle>
+      <SectionTitle>a bit about me</SectionTitle>
 
-      <div className="max-w-[70ch] box-content space-y-6 border-3 p-6 font-mono lowercase">
+      <div className="max-w-[70ch] box-content space-y-6 border-3 p-6 font-mono lowercase backdrop-blur-xs">
         <p>Hi. I'm Aziz.</p>
 
         <p>

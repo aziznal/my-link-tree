@@ -4,7 +4,7 @@ import { ProjectLink } from '@/lib/components/ProjectLink'
 export function Projects() {
   return (
     <div>
-      <SectionTitle>PROJECTS</SectionTitle>
+      <SectionTitle>projects</SectionTitle>
 
       <div
         className="grid grid-flow-dense gap-8 sm:gap-12"
