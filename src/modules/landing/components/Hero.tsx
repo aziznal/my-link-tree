@@ -3,14 +3,14 @@ import { TextType } from '@/lib/components/TextType'
 
 const AnimationDelays = {
   visitorDetected: () => 0,
-  echoTitle: () => AnimationDelays.visitorDetected() + 1500/2,
-  title: () => AnimationDelays.echoTitle() + 300/2,
+  echoTitle: () => AnimationDelays.visitorDetected() + 750,
+  title: () => AnimationDelays.echoTitle() + 150,
   subtitle: () => AnimationDelays.title() + 0,
 
-  emptyPrompt: () => AnimationDelays.subtitle() + 1200/2,
+  emptyPrompt: () => AnimationDelays.subtitle() + 600,
   cat: () => AnimationDelays.emptyPrompt() + 0,
-  checkout: () => AnimationDelays.cat() + 400/2,
-  finalCursor: () => AnimationDelays.checkout() + 500/2,
+  checkout: () => AnimationDelays.cat() + 200,
+  finalCursor: () => AnimationDelays.checkout() + 400,
 } as const
 
 export function Hero() {
@@ -18,8 +18,8 @@ export function Hero() {
   const formattedTime = `${now.current.getHours().toString().padStart(2, '0')}:${now.current.getMinutes().toString().padStart(2, '0')}:${now.current.getSeconds().toString().padStart(2, '0')}`
 
   return (
-    <div className="border rounded-lg mt-24 max-w-[80ch]">
-      <div className="bg-secondary rounded-t-lg px-3 py-0.5 grid grid-cols-3 items-center">
+    <div className="border mt-24 max-w-[80ch] bg-zinc-950">
+      <div className="bg-secondary px-3 py-0.5 grid grid-cols-3 items-center">
         <div className="flex gap-1">
           <div className="h-[12px] w-[12px] bg-secondary rounded-full" />
         </div>
@@ -42,7 +42,7 @@ export function Hero() {
         />
         <Type
           className="text-muted"
-          text='whoami'
+          text="whoami"
           delay={AnimationDelays.echoTitle()}
         />
 
@@ -53,7 +53,7 @@ export function Hero() {
             animationDelay: `${AnimationDelays.title()}ms`,
           }}
         >
-          <span/>
+          <span />
 
           <h1 className="text-[86px] text-accent text-shadow-lg text-shadow-accent/30 font-bold">
             <TextType
@@ -121,12 +121,17 @@ export function Hero() {
           </h1>
         </div>
 
-        <Type
-          className=""
-          text=""
-          delay={AnimationDelays.finalCursor()}
-          blinkingCursor
-        />
+        <div
+          className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both"
+          style={{
+            transitionDelay: `${AnimationDelays.finalCursor()}ms`,
+            animationDelay: `${AnimationDelays.finalCursor()}ms`,
+          }}
+        >
+          <Prompt />
+
+          <span className="not-focus:animate-blink delay-200">_</span>
+        </div>
       </div>
     </div>
   )

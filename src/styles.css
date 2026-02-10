@@ -90,3 +90,17 @@
 @utility text-glow-sm {
   @apply text-shadow-sm text-shadow-foreground/20;
 }
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+}
+@utility animate-blink {
+  animation: blink 1000ms infinite step-end;
+}
