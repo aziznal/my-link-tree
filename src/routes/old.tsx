@@ -1,4 +1,4 @@
-import { BlobBackground } from '@/lib/BlobBackground/BlobBackground'
+import { BlobBackground } from '@/lib/components/old/BlobBackground/BlobBackground'
 import { OldProjectLink } from '@/lib/components/old/OldProjectLink'
 import { OldSocialLink } from '@/lib/components/old/OldSocialLink'
 import { createFileRoute } from '@tanstack/react-router'
