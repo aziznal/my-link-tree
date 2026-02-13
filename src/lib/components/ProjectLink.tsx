@@ -21,11 +21,11 @@ export function ProjectLink({
       target="_blank"
       to={href}
       className={cn(
-        'group flex rounded-xs h-full gap-6 threeD backdrop-blur-sm transition-all hover:shadow-primary border items-center min-h-[150px]',
+        'group flex rounded h-full gap-6 threeD backdrop-blur-sm transition-all hover:shadow-primary border items-center min-h-[150px]',
         className,
       )}
     >
-      <div className="shrink-0 h-full w-[150px] rounded-l-xs flex">
+      <div className="shrink-0 h-full w-[150px] rounded-l flex">
         {!imageSrc && <LucideImage className="text-muted" size="36" />}
 
         {imageSrc && (
@@ -34,7 +34,7 @@ export function ProjectLink({
             alt={description}
             width={180}
             height={180}
-            className="rounded-l-xs object-cover w-full h-full"
+            className="rounded-l object-cover w-full h-full"
             decoding="async"
             fetchPriority="high"
           />
@@ -42,7 +42,7 @@ export function ProjectLink({
       </div>
 
       <div className="flex flex-col gap-3 -mt-2 py-4">
-        <span className="text-2xl text-balance font-lowres text-glow-sm group-hover:text-glow group-hover:text-shadow-primary duration-300">
+        <span className="text-2xl text-balance font-lowres text-glow-sm group-hover:text-shadow-primary duration-300">
           {children}
         </span>
 

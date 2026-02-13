@@ -69,7 +69,7 @@ export function SectionTitle({
     <>
       <h2
         className={cn(
-          'mb-4 min-h-fit text-[38px] font-bold sm:text-[42px] font-lowres text-glow',
+          'mb-4 min-h-fit text-[2.375rem] sm:text-[42px] font-lowres text-glow-sm',
           withHorizontalRule && 'mb-2',
           className,
         )}

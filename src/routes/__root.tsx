@@ -42,8 +42,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
 
       <body>
-        {/* <BgDecoration /> */}
-
         {children}
 
         <TanStackDevtools
@@ -60,66 +58,5 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
-  )
-}
-
-function BgDecoration() {
-  return (
-    <div className="fixed inset-0 -z-10 w-dvw h-dvh">
-      <svg
-        className="w-[200dvw] h-[200dvh]"
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        viewBox="0 0 700 700"
-        opacity="1"
-      >
-        <defs>
-          <filter
-            id="nnnoise-filter"
-            x="-20%"
-            y="-20%"
-            width="140%"
-            height="140%"
-            filterUnits="objectBoundingBox"
-            primitiveUnits="userSpaceOnUse"
-            colorInterpolationFilters="linearRGB"
-          >
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.142"
-              numOctaves="4"
-              seed="15"
-              stitchTiles="stitch"
-              x="0%"
-              y="0%"
-              width="100%"
-              height="100%"
-              result="turbulence"
-            ></feTurbulence>
-            <feSpecularLighting
-              surfaceScale="15"
-              specularConstant="0.75"
-              specularExponent="20"
-              lightingColor="#7957A8"
-              x="0%"
-              y="0%"
-              width="100%"
-              height="100%"
-              in="turbulence"
-              result="specularLighting"
-            >
-              <feDistantLight azimuth="3" elevation="100"></feDistantLight>
-            </feSpecularLighting>
-          </filter>
-        </defs>
-        <rect width="700" height="700" fill="transparent"></rect>
-        <rect
-          width="700"
-          height="700"
-          fill="#7957a8"
-          filter="url(#nnnoise-filter)"
-        ></rect>
-      </svg>
-    </div>
   )
 }

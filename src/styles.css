@@ -2,9 +2,13 @@
 @import 'tw-animate-css';
 
 @theme {
-  --color-background: oklch(from var(--color-neutral-950) calc(l * 1.2) c h);
+  --color-background: oklch(
+    from var(--color-blue-950) calc(l * 0.5) calc(c * 0.3) h
+  );
   --color-background-lighter: var(--color-neutral-900);
-  --color-foreground: var(--color-neutral-100);
+  --color-foreground: oklch(from var(--color-neutral-300) calc(0.81) c h);
+
+  --color-terminal: oklch(from var(--color-background) calc(l * 0.8) calc(c * 0.7) h);
 
   --color-card: var(--color-neutral-900);
   --color-card-foreground: var(--color-foreground);
@@ -15,7 +19,7 @@
   --color-primary: var(--color-emerald-600);
   --color-primary-foreground: var(--color-emerald-300);
 
-  --color-secondary: var(--color-neutral-800);
+  --color-secondary: var(--color-neutral-900);
   --color-secondary-foreground: var(--color-foreground);
 
   --color-muted: var(--color-neutral-500);
@@ -31,10 +35,10 @@
   --color-input: var(--color-border);
   --color-ring: var(--color-neutral-300);
 
-  --radius: 0.5rem;
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+  --radius: 4px;
+  --radius-lg: var(--radius + 2px);
+  --radius-md: calc(var(--radius));
+  --radius-sm: calc(var(--radius) - 2px);
 
   --font-lowres: 'MedodicaRegular', consolas;
 }
@@ -46,6 +50,14 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+  }
+
+  :root {
+    font-size: 16px;
+
+    @media (max-width: 64rem) {
+      font-size: 13px;
+    }
   }
 
   body {
@@ -103,4 +115,30 @@
 }
 @utility animate-blink {
   animation: blink 1000ms infinite step-end;
+}
+
+@layer scrollbar {
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+    background-color: #f5f5f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-foreground);
+
+    background-image: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      color-stop(0.5, rgba(255, 255, 255, 0.2)),
+      color-stop(0.5, transparent),
+      to(transparent)
+    );
+  }
 }

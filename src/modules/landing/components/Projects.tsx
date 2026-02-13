@@ -1,9 +1,9 @@
 import { SectionTitle } from '@/lib/components/Headings'
 import { ProjectLink } from '@/lib/components/ProjectLink'
 
-export function Projects() {
+export function Projects(props: { sectionId: string }) {
   return (
-    <div>
+    <div id={props.sectionId} className="scroll-mt-20">
       <SectionTitle>projects</SectionTitle>
 
       <div
