@@ -1,4 +1,4 @@
-import { cn } from '../cn'
+import { cn } from '../../cn'
 
 type HeadingProps = {
   children: React.ReactNode

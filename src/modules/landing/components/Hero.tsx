@@ -31,186 +31,192 @@ export function Hero(props: { sectionId: string }) {
 
   return (
     <div
-      className="border rounded max-w-[80ch] backdrop-blur-xs bg-terminal overflow-clip scroll-mt-20"
+      className="flex flex-col items-center scroll-mt-20 w-full"
       id={props.sectionId}
     >
-      <div className="bg-secondary px-3 py-0.5 grid grid-cols-3 items-center">
-        <div className="flex gap-1">
-          <div
-            className="h-[12px] w-[12px] bg-destructive rounded-full group"
-            onClick={() => setHasClickedClose(true)}
-          >
-            <LucideX
-              className="invisible group-hover:visible text-background stroke-3"
-              size="12"
-            />
-          </div>
-        </div>
-
-        <span className="text-center text-muted font-mono"> aziznal.sh </span>
-
-        <span />
-      </div>
-
-      <div
-        className="grid font-lowres leading-[0.6] text-2xl gap-y-2 p-4"
-        style={{
-          gridTemplateColumns: '3ch auto',
-        }}
-      >
-        <Type
-          className="text-muted"
-          text={`${formattedTime} visitor detected - booting up ...`}
-          delay={AnimationDelays.visitorDetected()}
-        />
-        <Type
-          className="text-muted"
-          text="whoami"
-          delay={AnimationDelays.echoTitle()}
-        />
-
-        <div
-          className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
-          style={{
-            transitionDelay: `${AnimationDelays.title()}ms`,
-            animationDelay: `${AnimationDelays.title()}ms`,
-          }}
-        >
-          <span />
-
-          <h1 className="text-[5.375rem] text-accent text-shadow-sm text-shadow-accent/30">
-            <TextType
-              text="Aziz Nal"
-              typingSpeed={35}
-              cursorCharacter="|"
-              initialDelay={AnimationDelays.title()}
-              cursorBlinkDuration={0.5}
-              showCursor={false}
-            />
-          </h1>
-        </div>
-
-        <div
-          className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
-          style={{
-            transitionDelay: `${AnimationDelays.subtitle()}ms`,
-            animationDelay: `${AnimationDelays.subtitle()}ms`,
-          }}
-        >
-          <span></span>
-
-          <h1 className="text-[1.75rem] text-accent text-shadow-sm text-shadow-accent/30">
-            <TextType
-              text="Web Developer - Designer - Huge Nerd"
-              typingSpeed={10}
-              cursorCharacter="|"
-              initialDelay={AnimationDelays.subtitle()}
-              cursorBlinkDuration={0.5}
-              showCursor={false}
-            />
-          </h1>
-        </div>
-
-        <Type
-          className="text-muted"
-          text=""
-          delay={AnimationDelays.emptyPrompt()}
-        />
-
-        <Type
-          className="text-muted"
-          text="cat ./welcome.txt"
-          delay={AnimationDelays.cat()}
-        />
-
-        <div
-          className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
-          style={{
-            transitionDelay: `${AnimationDelays.subtitle()}ms`,
-            animationDelay: `${AnimationDelays.subtitle()}ms`,
-          }}
-        >
-          <span></span>
-
-          <h1 className="text-primary text-[2rem] text-shadow-sm text-shadow-primary/30">
-            <TextType
-              text="Welcome visitor. Check out my projects below."
-              typingSpeed={10}
-              cursorCharacter="|"
-              initialDelay={AnimationDelays.checkout()}
-              cursorBlinkDuration={0.5}
-              showCursor={false}
-            />
-          </h1>
-        </div>
-
-        {hasClickedClose && (
-          <>
-            <Type text="" delay={AnimationDelays.shuttingDown()} />
-
-            <Type
-              className="text-destructive"
-              text="shutting down ..."
-              delay={AnimationDelays.shuttingDown()}
-            />
-
-            <Type
-              className="text-destructive"
-              text="attempting shutdown ..."
-              delay={AnimationDelays.shuttingDown1()}
-            />
-
-            <Type
-              className="text-destructive"
-              text="it's not ..."
-              delay={AnimationDelays.shuttingDown2()}
-            />
-
-            <Type
-              className="text-destructive"
-              text="it's-"
-              delay={AnimationDelays.shuttingDown3()}
-            />
-
-            <Type
-              className="text-destructive"
-              text="it's not-"
-              delay={AnimationDelays.shuttingDown4()}
-            />
-
-            <Type
-              className="text-destructive"
-              text="it's not shutting down!"
-              delay={AnimationDelays.shuttingDown5()}
-            />
-
+      <div className="sticky border rounded w-[min(100%,90ch)] backdrop-blur-xs bg-terminal overflow-clip min-h-[25dvh] mt-[10rem]">
+        <div className="bg-secondary px-3 py-0.5 grid grid-cols-3 items-center">
+          <div className="flex gap-1">
             <div
-              className="col-span-2 animate-in fade-in duration-[0ms] fill-mode-both text-red-500"
-              style={{
-                transitionDelay: `${AnimationDelays.shuttingDown6()}ms`,
-                animationDelay: `${AnimationDelays.shuttingDown6()}ms`,
-              }}
+              className="h-3 w-3 bg-destructive rounded-full group"
+              onClick={() => setHasClickedClose(true)}
             >
-              <FuzzyText fontSize="2rem" baseIntensity={0.1} className="bg-red-500">
-                exit -1
-              </FuzzyText>
+              <LucideX
+                className="invisible group-hover:visible text-background stroke-3"
+                size="12"
+              />
             </div>
-          </>
-        )}
+          </div>
 
-        {!hasClickedClose && (
+          <span className="text-center text-muted font-mono"> aziznal.sh </span>
+
+          <span />
+        </div>
+
+        <div
+          className="grid font-lowres leading-[0.6] text-2xl gap-y-2 p-4"
+          style={{
+            gridTemplateColumns: '3ch auto',
+          }}
+        >
+          <Type
+            className="text-muted"
+            text={`${formattedTime} visitor detected - booting up ...`}
+            delay={AnimationDelays.visitorDetected()}
+          />
+          <Type
+            className="text-muted"
+            text="whoami"
+            delay={AnimationDelays.echoTitle()}
+          />
+
           <div
-            className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both"
+            className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
             style={{
-              transitionDelay: `${AnimationDelays.finalCursor()}ms`,
-              animationDelay: `${AnimationDelays.finalCursor()}ms`,
+              transitionDelay: `${AnimationDelays.title()}ms`,
+              animationDelay: `${AnimationDelays.title()}ms`,
             }}
           >
-            <Prompt />
+            <span />
 
-            <span className="not-focus:animate-blink delay-200">_</span>
+            <h1 className="text-[5.375rem] text-accent text-shadow-sm text-shadow-accent/30">
+              <TextType
+                text="Aziz Nal"
+                typingSpeed={35}
+                cursorCharacter="|"
+                initialDelay={AnimationDelays.title()}
+                cursorBlinkDuration={0.5}
+                showCursor={false}
+              />
+            </h1>
           </div>
-        )}
+
+          <div
+            className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
+            style={{
+              transitionDelay: `${AnimationDelays.subtitle()}ms`,
+              animationDelay: `${AnimationDelays.subtitle()}ms`,
+            }}
+          >
+            <span></span>
+
+            <h1 className="text-[1.75rem] text-accent text-shadow-sm text-shadow-accent/30">
+              <TextType
+                text="Web Developer - Designer - Huge Nerd"
+                typingSpeed={10}
+                cursorCharacter="|"
+                initialDelay={AnimationDelays.subtitle()}
+                cursorBlinkDuration={0.5}
+                showCursor={false}
+              />
+            </h1>
+          </div>
+
+          <Type
+            className="text-muted"
+            text=""
+            delay={AnimationDelays.emptyPrompt()}
+          />
+
+          <Type
+            className="text-muted"
+            text="cat ./welcome.txt"
+            delay={AnimationDelays.cat()}
+          />
+
+          <div
+            className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
+            style={{
+              transitionDelay: `${AnimationDelays.subtitle()}ms`,
+              animationDelay: `${AnimationDelays.subtitle()}ms`,
+            }}
+          >
+            <span></span>
+
+            <h1 className="text-primary text-[2rem] text-shadow-sm text-shadow-primary/30">
+              <TextType
+                text="Welcome visitor. Check out my projects below."
+                typingSpeed={10}
+                cursorCharacter="|"
+                initialDelay={AnimationDelays.checkout()}
+                cursorBlinkDuration={0.5}
+                showCursor={false}
+              />
+            </h1>
+          </div>
+
+          {hasClickedClose && (
+            <>
+              <Type text="" delay={AnimationDelays.shuttingDown()} />
+
+              <Type
+                className="text-destructive"
+                text="shutting down ..."
+                delay={AnimationDelays.shuttingDown()}
+              />
+
+              <Type
+                className="text-destructive"
+                text="attempting shutdown ..."
+                delay={AnimationDelays.shuttingDown1()}
+              />
+
+              <Type
+                className="text-destructive"
+                text="it's not ..."
+                delay={AnimationDelays.shuttingDown2()}
+              />
+
+              <Type
+                className="text-destructive"
+                text="it's-"
+                delay={AnimationDelays.shuttingDown3()}
+              />
+
+              <Type
+                className="text-destructive"
+                text="it's not-"
+                delay={AnimationDelays.shuttingDown4()}
+              />
+
+              <Type
+                className="text-destructive"
+                text="it's not shutting down!"
+                delay={AnimationDelays.shuttingDown5()}
+              />
+
+              <div
+                className="col-span-2 animate-in fade-in duration-[0ms] fill-mode-both text-red-500"
+                style={{
+                  transitionDelay: `${AnimationDelays.shuttingDown6()}ms`,
+                  animationDelay: `${AnimationDelays.shuttingDown6()}ms`,
+                }}
+              >
+                <FuzzyText
+                  fontSize="2rem"
+                  baseIntensity={0.1}
+                  className="bg-red-500"
+                >
+                  exit -1
+                </FuzzyText>
+              </div>
+            </>
+          )}
+
+          {!hasClickedClose && (
+            <div
+              className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both"
+              style={{
+                transitionDelay: `${AnimationDelays.finalCursor()}ms`,
+                animationDelay: `${AnimationDelays.finalCursor()}ms`,
+              }}
+            >
+              <Prompt />
+
+              <span className="not-focus:animate-blink delay-200">_</span>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

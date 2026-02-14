@@ -1,4 +1,4 @@
-import { SectionTitle } from '@/lib/components/Headings'
+import { SectionTitle } from '@/lib/components/ui/Headings'
 import { SocialLink } from '@/lib/components/SocialLink'
 import {
   LucideGithub,

@@ -1,4 +1,5 @@
-import { SectionTitle } from '@/lib/components/Headings'
+import { Frame } from '@/lib/components/ui/Frame'
+import { SectionTitle } from '@/lib/components/ui/Headings'
 
 export function Summary(props: { sectionId: string }) {
   const startDate = new Date('2020-01-01')
@@ -9,7 +10,7 @@ export function Summary(props: { sectionId: string }) {
     <div id={props.sectionId} className="scroll-mt-20">
       <SectionTitle>a bit about me</SectionTitle>
 
-      <div className="max-w-[70ch] box-content space-y-6 border-3 p-6 font-mono lowercase backdrop-blur-xs rounded">
+      <Frame className="max-w-[70ch] space-y-6 font-mono lowercase backdrop-blur-md">
         <p>Hi. I'm Aziz.</p>
 
         <p>
@@ -29,7 +30,7 @@ export function Summary(props: { sectionId: string }) {
           I enjoy reading & making cool components and animations in my spare
           time.
         </p>
-      </div>
+      </Frame>
     </div>
   )
 }

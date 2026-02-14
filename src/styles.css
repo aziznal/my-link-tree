@@ -3,13 +3,17 @@
 
 @theme {
   --color-background: oklch(
-    from var(--color-blue-950) calc(l * 0.35) calc(c * 0.3) h
+    from var(--color-sky-950) calc(l * 0.35) calc(c * 0.6) h
   );
   --color-background-lighter: var(--color-neutral-900);
   --color-foreground: oklch(from var(--color-neutral-300) calc(0.81) c h);
 
-  --color-terminal: oklch(from var(--color-background) calc(l * 0.8) calc(c * 0.9) h);
-  --color-decoration: oklch(from var(--color-background) calc(l * 2.5)  calc(c * 4) h);
+  --color-terminal: oklch(
+    from var(--color-background) calc(l * 0.9) calc(c * 0.9) h
+  );
+  --color-decoration: oklch(
+    from var(--color-background) calc(l * 3) calc(c * 2) h
+  );
 
   --color-card: var(--color-neutral-900);
   --color-card-foreground: var(--color-foreground);
@@ -42,6 +46,7 @@
   --radius-sm: calc(var(--radius) - 2px);
 
   --font-lowres: 'MedodicaRegular', consolas;
+  --font-sans: Recursive, sans-serif;
 }
 
 @layer base {
@@ -65,7 +70,6 @@
     background: var(--color-background);
     color: var(--color-foreground);
 
-    font-family: Recursive, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

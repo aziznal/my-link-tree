@@ -1,4 +1,4 @@
-import { SectionTitle } from '@/lib/components/Headings'
+import { SectionTitle } from '@/lib/components/ui/Headings'
 import { ProjectLink } from '@/lib/components/ProjectLink'
 
 export function Projects(props: { sectionId: string }) {
