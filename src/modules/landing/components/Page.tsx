@@ -9,7 +9,7 @@ import { Frame } from '@/lib/components/ui/Frame'
 export function LandingPage() {
   return (
     <div className="flex flex-col mx-auto w-[min(100%,80ch)] px-8 pb-24 items-stretch gap-12">
-      <div className="font-lowres sticky top-0 z-10 flex gap-[3rem] text-[2rem] backdrop-blur-md bg-background/70 py-6 justify-center -mx-[4rem]">
+      <div className="font-lowres sticky top-0 z-10 flex gap-[3rem] text-[2rem] backdrop-blur-md bg-background/70 py-6 justify-center lg:-mx-[4rem]">
         <Menu />
         {/* <div>power</div> */}
       </div>
