@@ -3,12 +3,13 @@
 
 @theme {
   --color-background: oklch(
-    from var(--color-blue-950) calc(l * 0.5) calc(c * 0.3) h
+    from var(--color-blue-950) calc(l * 0.35) calc(c * 0.3) h
   );
   --color-background-lighter: var(--color-neutral-900);
   --color-foreground: oklch(from var(--color-neutral-300) calc(0.81) c h);
 
-  --color-terminal: oklch(from var(--color-background) calc(l * 0.8) calc(c * 0.7) h);
+  --color-terminal: oklch(from var(--color-background) calc(l * 0.8) calc(c * 0.9) h);
+  --color-decoration: oklch(from var(--color-background) calc(l * 2.5)  calc(c * 4) h);
 
   --color-card: var(--color-neutral-900);
   --color-card-foreground: var(--color-foreground);

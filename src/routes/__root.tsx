@@ -42,6 +42,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
 
       <body>
+        <BgDecoration />
+
         {children}
 
         <TanStackDevtools
@@ -58,5 +60,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
+  )
+}
+
+function BgDecoration() {
+  return (
+    <div
+      className="fixed inset-0 -z-10"
+      style={{
+        backgroundImage:
+          'radial-gradient(circle, var(--color-decoration) 1px, transparent 1px)',
+        backgroundSize: '36px 36px',
+        backgroundPosition: '0 0',
+      }}
+    />
   )
 }
