@@ -1,6 +1,6 @@
 - [x] I need a hero, im callin out for a hero
 - [ ] make little garden for shiro on bottom
-- [ ] write summary. "i am a developer who enjoys making cool components and animations in his spare time"
+- [x] write summary. "i am a developer who enjoys making cool components and animations in his spare time"
 - [ ] link cv
 - [ ] archive old / irrelevant stuff
 - [x] Add favicon

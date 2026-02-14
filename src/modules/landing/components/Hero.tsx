@@ -9,10 +9,11 @@ const AnimationDelays = {
   title: () => AnimationDelays.echoTitle() + 150,
   subtitle: () => AnimationDelays.title() + 0,
 
-  emptyPrompt: () => AnimationDelays.subtitle() + 600,
+  emptyPrompt: () => AnimationDelays.subtitle() + 1200,
   cat: () => AnimationDelays.emptyPrompt() + 0,
   checkout: () => AnimationDelays.cat() + 200,
-  finalCursor: () => AnimationDelays.checkout() + 400,
+  checkout1: () => AnimationDelays.cat() + 800,
+  finalCursor: () => AnimationDelays.checkout1() + 400,
 
   shuttingDown: () => 0,
   shuttingDown1: () => AnimationDelays.shuttingDown() + 1500,
@@ -31,10 +32,10 @@ export function Hero(props: { sectionId: string }) {
 
   return (
     <div
-      className="flex flex-col items-center scroll-mt-20 w-full"
+      className="flex flex-col items-center scroll-mt-56 w-full"
       id={props.sectionId}
     >
-      <div className="sticky border rounded w-[min(100%,90ch)] backdrop-blur-xs bg-terminal overflow-clip min-h-[25dvh] mt-[10rem]">
+      <div className="sticky border rounded w-[min(100%,90ch)] backdrop-blur-xs bg-terminal overflow-clip min-h-[25dvh]">
         <div className="bg-secondary px-3 py-0.5 grid grid-cols-3 items-center">
           <div className="flex gap-1">
             <div
@@ -133,16 +134,37 @@ export function Hero(props: { sectionId: string }) {
           >
             <span></span>
 
-            <h1 className="text-primary text-[2rem] text-shadow-sm text-shadow-primary/30">
+            <h2 className="text-primary-foreground text-[2rem]">
               <TextType
-                text="Welcome visitor. Check out my projects below."
-                typingSpeed={10}
+                text="Welcome, visitor."
+                typingSpeed={15}
                 cursorCharacter="|"
                 initialDelay={AnimationDelays.checkout()}
                 cursorBlinkDuration={0.5}
                 showCursor={false}
               />
-            </h1>
+            </h2>
+          </div>
+
+          <div
+            className="col-span-2 grid grid-cols-subgrid animate-in fade-in duration-[0ms] fill-mode-both w-full items-start"
+            style={{
+              transitionDelay: `${AnimationDelays.checkout1()}ms`,
+              animationDelay: `${AnimationDelays.checkout1()}ms`,
+            }}
+          >
+            <span></span>
+
+            <h2 className="text-primary-foreground text-[2rem]">
+              <TextType
+                text="Check out my projects below!"
+                typingSpeed={15}
+                cursorCharacter="|"
+                initialDelay={AnimationDelays.checkout1()}
+                cursorBlinkDuration={0.5}
+                showCursor={false}
+              />
+            </h2>
           </div>
 
           {hasClickedClose && (

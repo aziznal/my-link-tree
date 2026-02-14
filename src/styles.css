@@ -2,8 +2,11 @@
 @import 'tw-animate-css';
 
 @theme {
+  --color-primary: var(--color-blue-600);
+  --color-primary-foreground: var(--color-blue-400);
+
   --color-background: oklch(
-    from var(--color-sky-950) calc(l * 0.35) calc(c * 0.6) h
+    from var(--color-primary) calc(l * 0.35) calc(c * 0.1) h
   );
   --color-background-lighter: var(--color-neutral-900);
   --color-foreground: oklch(from var(--color-neutral-300) calc(0.81) c h);
@@ -12,7 +15,7 @@
     from var(--color-background) calc(l * 0.9) calc(c * 0.9) h
   );
   --color-decoration: oklch(
-    from var(--color-background) calc(l * 3) calc(c * 2) h
+    from var(--color-background) calc(l * 1.4) calc(c * 3) h
   );
 
   --color-card: var(--color-neutral-900);
@@ -20,9 +23,6 @@
 
   --color-popover: var(--color-background);
   --color-popover-foreground: var(--color-foreground);
-
-  --color-primary: var(--color-emerald-600);
-  --color-primary-foreground: var(--color-emerald-300);
 
   --color-secondary: var(--color-neutral-900);
   --color-secondary-foreground: var(--color-foreground);
@@ -98,7 +98,7 @@
 }
 
 @utility threeD {
-  @apply shadow-[4px_4px] shadow-neutral-600 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0px_0px];
+  @apply shadow-[4px_4px] shadow-neutral-600 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[0px_0px];
 }
 
 @utility text-glow {

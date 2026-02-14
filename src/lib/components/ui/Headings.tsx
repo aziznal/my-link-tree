@@ -6,12 +6,16 @@ type HeadingProps = {
   withHorizontalRule?: boolean
 }
 
-export function H1({ children, className, withHorizontalRule }: HeadingProps) {
+export function Title({
+  children,
+  className,
+  withHorizontalRule,
+}: HeadingProps) {
   return (
     <>
       <h1
         className={cn(
-          'mb-4 min-h-fit text-3xl font-bold sm:text-4xl',
+          'mb-4 min-h-fit text-[2.375rem] sm:text-[2.625rem] font-lowres text-glow-sm',
           withHorizontalRule && 'mb-2',
           className,
         )}
@@ -24,43 +28,7 @@ export function H1({ children, className, withHorizontalRule }: HeadingProps) {
   )
 }
 
-export function H2({ children, className, withHorizontalRule }: HeadingProps) {
-  return (
-    <>
-      <h2
-        className={cn(
-          'mb-4 min-h-fit text-2xl font-bold sm:text-3xl',
-          withHorizontalRule && 'mb-2',
-          className,
-        )}
-      >
-        {children}
-      </h2>
-
-      {withHorizontalRule && <hr className="mb-4" />}
-    </>
-  )
-}
-
-export function H3({ children, className, withHorizontalRule }: HeadingProps) {
-  return (
-    <>
-      <h3
-        className={cn(
-          'mb-4 min-h-fit text-xl font-bold sm:text-2xl',
-          withHorizontalRule && 'mb-2',
-          className,
-        )}
-      >
-        {children}
-      </h3>
-
-      {withHorizontalRule && <hr className="mb-4" />}
-    </>
-  )
-}
-
-export function SectionTitle({
+export function Subtitle({
   children,
   className,
   withHorizontalRule,
@@ -69,7 +37,7 @@ export function SectionTitle({
     <>
       <h2
         className={cn(
-          'mb-4 min-h-fit text-[2.375rem] sm:text-[42px] font-lowres text-glow-sm',
+          'mb-1 min-h-fit text-[1.375rem] sm:text-[1.875rem] font-lowres text-glow-sm',
           withHorizontalRule && 'mb-2',
           className,
         )}

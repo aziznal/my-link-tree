@@ -1,4 +1,4 @@
-import { SectionTitle } from '@/lib/components/ui/Headings'
+import { Title } from '@/lib/components/ui/Headings'
 import { SocialLink } from '@/lib/components/SocialLink'
 import {
   LucideGithub,
@@ -11,7 +11,7 @@ import {
 export function SocialLinks() {
   return (
     <div>
-      <SectionTitle>links</SectionTitle>
+      <Title>links</Title>
 
       <div className="flex flex-wrap gap-4 lowercase">
         <SocialLink

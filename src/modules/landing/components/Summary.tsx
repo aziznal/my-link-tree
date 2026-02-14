@@ -1,5 +1,5 @@
 import { Frame } from '@/lib/components/ui/Frame'
-import { SectionTitle } from '@/lib/components/ui/Headings'
+import { Title } from '@/lib/components/ui/Headings'
 
 export function Summary(props: { sectionId: string }) {
   const startDate = new Date('2020-01-01')
@@ -7,10 +7,10 @@ export function Summary(props: { sectionId: string }) {
     new Date(Date.now()).getFullYear() - startDate.getFullYear()
 
   return (
-    <div id={props.sectionId} className="scroll-mt-20">
-      <SectionTitle>a bit about me</SectionTitle>
+    <div id={props.sectionId} className="scroll-mt-20 w-full">
+      <Title>a bit about me</Title>
 
-      <Frame className="max-w-[70ch] space-y-6 font-mono lowercase backdrop-blur-md">
+      <Frame className="space-y-6 font-mono lowercase backdrop-blur-md">
         <p>Hi. I'm Aziz.</p>
 
         <p>
