@@ -4,11 +4,11 @@ import { PropsWithChildren } from 'react'
 
 export function Projects(props: { sectionId: string }) {
   return (
-    <div id={props.sectionId} className="scroll-mt-20 space-y-12">
+    <div id={props.sectionId} className="scroll-mt-20 space-y-24">
       <Title>projects</Title>
 
       <section>
-        <Subtitle>concepts / exploration</Subtitle>
+        <Subtitle className="mb-8">concepts</Subtitle>
 
         <ProjectGrid>
           <ProjectLink
@@ -17,6 +17,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A few examples implemented with the excellent tanstack forms library'
             }
+            techTags={['Tanstack Start', 'Tanstack Forms']}
           >
             Tanstack forms examples
           </ProjectLink>
@@ -27,6 +28,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'An exploration of exactly what i18n is in the web world and how it can be applied in various different server and client contexts'
             }
+            techTags={['NextJS', 'next-intl']}
           >
             i18n in Next.js
           </ProjectLink>
@@ -37,6 +39,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'An interactive demo of how tanstack queries, query keys, stale data handling, and invalidation work and can be configured.'
             }
+            techTags={['Tanstack Query', 'NextJS']}
           >
             Tanstack Query Keys Demo
           </ProjectLink>
@@ -47,6 +50,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A couple of demos for lazy loading and infinite scroll withTanstack (a.k.a React) Query. '
             }
+            techTags={['Tanstack Query', 'NextJS']}
           >
             Lazy loading with React Query
           </ProjectLink>
@@ -57,6 +61,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A before and after comparison with an interactive site wreckingtoolbar for users to play with.'
             }
+            techTags={['NextJS']}
           >
             Interactive design principles
           </ProjectLink>
@@ -67,6 +72,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'Testing out how tailwind can be leveraged to create custom themes.'
             }
+            techTags={['Tailwind', 'NextJS']}
           >
             Custom Themes with Tailwind
           </ProjectLink>
@@ -74,7 +80,7 @@ export function Projects(props: { sectionId: string }) {
       </section>
 
       <section>
-        <Subtitle>components</Subtitle>
+        <Subtitle className="mb-8">components</Subtitle>
 
         <ProjectGrid>
           <ProjectLink
@@ -83,6 +89,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A github-like streak tracker with customization options'
             }
+            techTags={['Tailwind', 'React']}
           >
             Streak Tracker
           </ProjectLink>
@@ -93,6 +100,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A tag input made from scratch using React and TailwindCSS. It seemed quite difficult at the beginning, then turned out to be easy, then hard again. Was a lot of fun!'
             }
+            techTags={['Tailwind', 'React']}
           >
             Tag Input Demo
           </ProjectLink>
@@ -103,6 +111,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'Emoji Picker with lazy loading, virtualization, and search. Why? Because I had 20 hours to kill researching unicode standards. '
             }
+            techTags={['React']}
           >
             Emoji Picker
           </ProjectLink>
@@ -110,7 +119,7 @@ export function Projects(props: { sectionId: string }) {
       </section>
 
       <section>
-        <Subtitle>random fun</Subtitle>
+        <Subtitle className="mb-8">random fun</Subtitle>
 
         <ProjectGrid>
           <ProjectLink
@@ -119,6 +128,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'An matrix digital rain effect I made for fun (with some customization options)'
             }
+            techTags={['React', 'Canvas']}
           >
             Matrix Effect
           </ProjectLink>
@@ -129,14 +139,32 @@ export function Projects(props: { sectionId: string }) {
             description={
               "A couple of dates to which I redirected my friends to when they asked me when I'm going to my military service. "
             }
+            techTags={[
+              'NextJS',
+              'Vercel',
+              'Tailwind',
+              'React',
+              'HTML',
+              'CSS',
+              'TypeScript',
+              'WebPack',
+              'Turbopack',
+              'Github',
+              'Advanced Caching',
+              'Database Sharding',
+              'Load Balancing',
+            ]}
           >
             When am I going to my military service?
           </ProjectLink>
+
+          {/* empty div to force at least 3 columns in this section */}
+          <div />
         </ProjectGrid>
       </section>
 
       <section>
-        <Subtitle>applications</Subtitle>
+        <Subtitle className="mb-8">applications</Subtitle>
 
         <ProjectGrid>
           <ProjectLink
@@ -145,6 +173,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               "A site I made to practice guitar with helpful tools and resources. I swear I'll start practicing soon."
             }
+            techTags={['Tanstack Start']}
           >
             Guitar practice website (wip)
           </ProjectLink>
@@ -155,6 +184,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A tax calculator with support for multiple tax ranges and premade template'
             }
+            techTags={['NextJS']}
           >
             Tax Calculator
           </ProjectLink>
@@ -175,6 +205,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A very simple thai number generator that I made to practice my thai numbers'
             }
+            techTags={['NextJS']}
           >
             Thai Number Generator
           </ProjectLink>
@@ -185,6 +216,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A very basic portfolio I made for my dad to showcase some of his work. Took about 2 hours to finish, including purchasing the domain and deploying the site.'
             }
+            techTags={['NextJS']}
           >
             Samehnaal.com
           </ProjectLink>
@@ -195,6 +227,7 @@ export function Projects(props: { sectionId: string }) {
             description={
               'A site where I document some useful stuff for learning German.'
             }
+            techTags={['NextJS']}
           >
             German Docs
           </ProjectLink>

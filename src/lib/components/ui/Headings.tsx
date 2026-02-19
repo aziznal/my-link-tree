@@ -37,7 +37,7 @@ export function Subtitle({
     <>
       <h2
         className={cn(
-          'mb-1 min-h-fit text-[1.375rem] sm:text-[1.875rem] font-lowres text-glow-sm',
+          'mb-1 min-h-fit text-[1.625rem] sm:text-[2rem] font-lowres text-glow-sm',
           withHorizontalRule && 'mb-2',
           className,
         )}

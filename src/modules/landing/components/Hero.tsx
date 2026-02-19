@@ -42,10 +42,7 @@ export function Hero(props: { sectionId: string }) {
               className="h-3 w-3 bg-destructive rounded-full group"
               onClick={() => setHasClickedClose(true)}
             >
-              <LucideX
-                className="invisible group-hover:visible text-background stroke-3"
-                size="12"
-              />
+              <LucideX className="invisible group-hover:visible text-background stroke-3 w-full h-full" />
             </div>
           </div>
 

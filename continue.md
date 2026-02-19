@@ -13,3 +13,4 @@
   - fancy stuff / showcases
 - [x] fix project images flicker (something about priority / lazy prop for img element)
 - [ ] fidgeting area
+- [ ] add section for my nerdy stuff: linux, neovim, home automation, keyboard shortcuts, etc.
