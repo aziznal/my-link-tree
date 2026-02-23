@@ -1,4 +1,3 @@
-import { LucideCirclePower, LucidePowerOff } from 'lucide-react'
 import { Hero } from './Hero'
 import { Menu, SECTIONS } from './Menu'
 import { Projects } from './Projects'
@@ -19,7 +18,7 @@ export function LandingPage() {
         <ThemePicker />
       </header>
 
-      <main className="flex flex-col items-stretch gap-[12rem] mx-auto w-[min(100%,90ch)] max-sm:px-8">
+      <main className="flex flex-col items-stretch gap-[12rem] mx-auto w-[min(100%,120ch)] px-8">
         <div className="h-[40dvh]">
           <Hero sectionId={SECTIONS[0].id} />{' '}
         </div>

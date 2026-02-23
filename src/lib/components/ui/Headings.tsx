@@ -15,7 +15,7 @@ export function Title({
     <>
       <h1
         className={cn(
-          'mb-4 min-h-fit text-[2.375rem] sm:text-[2.625rem] font-lowres text-glow-sm',
+          'mb-4 min-h-fit text-[2.375rem] sm:text-[2.625rem] font-lowres',
           withHorizontalRule && 'mb-2',
           className,
         )}
@@ -37,7 +37,7 @@ export function Subtitle({
     <>
       <h2
         className={cn(
-          'mb-1 min-h-fit text-[1.625rem] sm:text-[2rem] font-lowres text-glow-sm',
+          'mb-1 min-h-fit text-[1.875rem] sm:text-[2.375rem] font-lowres',
           withHorizontalRule && 'mb-2',
           className,
         )}
