@@ -15,9 +15,15 @@ export function Projects(props: { sectionId: string }) {
 
         <LinkList>
           <MinorLink
-            siteUrl="https://tax-calc.aziznal.com"
-            githubUrl="https://github.com/aziznal/tax-calc"
-            text="Tax Calculator"
+            siteUrl="finance-manager.aziznal.com"
+            githubUrl={undefined}
+            text="Finman: personal finance application"
+          />
+
+          <MinorLink
+            siteUrl="https://skillsvalley.io"
+            githubUrl={undefined}
+            text="SkillsValley: Skills-based job matching"
           />
 
           <MinorLink
@@ -36,6 +42,12 @@ export function Projects(props: { sectionId: string }) {
             siteUrl={undefined}
             githubUrl={undefined}
             text="The Middleman: App for connecting syrians looking for handymen, doctors, and more"
+          />
+
+          <MinorLink
+            siteUrl="https://tax-calc.aziznal.com"
+            githubUrl="https://github.com/aziznal/tax-calc"
+            text="Tax Calculator"
           />
         </LinkList>
       </section>
