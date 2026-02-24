@@ -1,152 +1,194 @@
 import { Subtitle, Title } from '@/lib/components/ui/Headings'
-import { MinorProjectLink } from '@/lib/components/MinorProjectLink'
+import { MinorLink } from '@/lib/components/MinorLink'
 import { PropsWithChildren } from 'react'
-import { TinyProjectLink } from '@/lib/components/TinyProjectLink'
+import { TinyLink } from '@/lib/components/TinyLink'
 
 export function Projects(props: { sectionId: string }) {
   return (
     <div id={props.sectionId} className="scroll-mt-20 space-y-14">
       <div>
-        <Title>other stuff i've done</Title>
+        <Title>stuff i've done</Title>
       </div>
 
       <section>
-        <Subtitle className="mb-4">concepts</Subtitle>
+        <Subtitle>applications</Subtitle>
 
-        <ProjectList>
-          <MinorProjectLink
-            siteUrl="https://query-key-factory.aziznal.com/"
-            githubUrl="https://github.com/aziznal/tanstack-query-key-factory-demo"
-            text="Interactive demo: How query keys work in tanstack query"
-          />
-
-          <MinorProjectLink
-            siteUrl="https://lazy-loading.aziznal.com"
-            githubUrl="https://github.com/aziznal/nextjs-tanstack-query-lazy-loading"
-            text="Infinite scroll / Lazy loading with tanstack query"
-          />
-        </ProjectList>
-      </section>
-
-      <section>
-        <Subtitle className="mb-4">components</Subtitle>
-
-        <ProjectList>
-          <MinorProjectLink
-            siteUrl="https://streak-tracker.aziznal.com"
-            githubUrl="https://github.com/aziznal/streak-tracker"
-            text="Streak Tracker"
-          />
-
-          <MinorProjectLink
-            siteUrl="https://tag-input.aziznal.com"
-            githubUrl="https://github.com/aziznal/tagifying-input"
-            text="Tag Input Demo"
-          />
-        </ProjectList>
-      </section>
-
-      <section>
-        <Subtitle className="mb-4">random fun</Subtitle>
-
-        <ProjectList>
-          <MinorProjectLink
-            siteUrl="https://matrix-effect.aziznal.com/"
-            githubUrl="https://github.com/aziznal/matrix-effect"
-            text="Matrix Effect"
-          />
-        </ProjectList>
-      </section>
-
-      <section>
-        <Subtitle className="mb-4">applications</Subtitle>
-
-        <ProjectList>
-          <MinorProjectLink
+        <LinkList>
+          <MinorLink
             siteUrl="https://tax-calc.aziznal.com"
             githubUrl="https://github.com/aziznal/tax-calc"
             text="Tax Calculator"
           />
 
-          <MinorProjectLink
-            siteUrl="https://thai-number-generator.aziznal.com/"
-            githubUrl="https://github.com/aziznal/thai-number-generator"
-            text="Thai Number Generator"
-          />
-
-          <MinorProjectLink
-            siteUrl="https://samehnaal.com"
-            githubUrl="https://github.com/aziznal/samehnaal.com"
-            text="Samehnaal.com"
-          />
-
-          <MinorProjectLink
+          <MinorLink
             siteUrl="https://german-docs.aziznal.com"
             githubUrl="https://github.com/aziznal/german-docs"
             text="German Docs"
           />
-        </ProjectList>
+
+          <MinorLink
+            siteUrl="https://marketplace.visualstudio.com/items?itemName=aziznal.dart-import-sorter"
+            githubUrl="https://github.com/aziznal/dart-import-sorter"
+            text="VSCode Extension: Dart import sorter (12K+ downloads)"
+          />
+
+          <MinorLink
+            siteUrl={undefined}
+            githubUrl={undefined}
+            text="The Middleman: App for connecting syrians looking for handymen, doctors, and more"
+          />
+        </LinkList>
+      </section>
+
+      <section>
+        <Subtitle>concepts</Subtitle>
+
+        <LinkList>
+          <MinorLink
+            siteUrl="https://query-key-factory.aziznal.com/"
+            githubUrl="https://github.com/aziznal/tanstack-query-key-factory-demo"
+            text="How query keys work in tanstack query"
+          />
+
+          <MinorLink
+            siteUrl="https://lazy-loading.aziznal.com"
+            githubUrl="https://github.com/aziznal/nextjs-tanstack-query-lazy-loading"
+            text="Infinite scroll & lazy loading with tanstack query"
+          />
+        </LinkList>
+      </section>
+
+      <section>
+        <Subtitle>components</Subtitle>
+
+        <LinkList>
+          <MinorLink
+            siteUrl="https://streak-tracker.aziznal.com"
+            githubUrl="https://github.com/aziznal/streak-tracker"
+            text="Streak Tracker"
+          />
+
+          <MinorLink
+            siteUrl="https://tag-input.aziznal.com"
+            githubUrl="https://github.com/aziznal/tagifying-input"
+            text="Tag Input Demo"
+          />
+        </LinkList>
+      </section>
+
+      <section>
+        <Subtitle>random fun</Subtitle>
+
+        <LinkList>
+          <MinorLink
+            siteUrl="https://matrix-effect.aziznal.com/"
+            githubUrl="https://github.com/aziznal/matrix-effect"
+            text="Matrix Effect"
+          />
+
+          <MinorLink
+            siteUrl="https://project-graveyard.aziznal.com"
+            githubUrl="https://github.com/aziznal/project-graveyard"
+            text="My Project Graveyard"
+          />
+
+          <MinorLink
+            siteUrl={undefined}
+            githubUrl="https://github.com/aziznal/inverted-binary-tree-in-30-programming-languages"
+            text="Inverting a binary tree in 30+ programming languages"
+          />
+
+          <MinorLink
+            siteUrl="https://thai-number-generator.aziznal.com/"
+            githubUrl="https://github.com/aziznal/thai-number-generator"
+            text="Thai Number Generator"
+          />
+        </LinkList>
       </section>
 
       <section>
         <h2 className="font-lowres text-2xl mb-4">archive</h2>
 
         <div className="text-muted fill-muted">
-          <ProjectList>
-            <TinyProjectLink
+          <LinkList>
+            <TinyLink
               siteUrl="https://guitar-practice.aziznal.com"
               githubUrl="https://github.com/aziznal/guitar-practice-website"
               text="Guitar practice website (wip)"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://tanstack-forms.aziznal.com"
               githubUrl="https://github.com/aziznal/tanstack-form-examples"
               text="Tanstack forms examples"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://i18n-in-nextjs.aziznal.com"
               githubUrl="https://github.com/aziznal/i18n-in-nextjs15-app-router"
               text="Demo of next-intl"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://design-principles.aziznal.com"
               githubUrl="https://github.com/aziznal/design-principles-comparison"
               text="Interactive design principles"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://custom-themes.aziznal.com"
               githubUrl="https://github.com/aziznal/custom-themes-nextjs"
               text="Custom Themes with Tailwind"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://emoji-picker.aziznal.com"
               githubUrl="https://github.com/aziznal/nextjs-fuzzy-lazy-loading-emoji-picker"
               text="Emoji Picker"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://ne-zaman-askeriyeye-gidiyorsun.aziznal.com"
               githubUrl="https://github.com/aziznal/ne-zaman-askeriyeye-gidiyorsun"
               text="When am I going to my military service?"
             />
 
-            <TinyProjectLink
+            <TinyLink
               siteUrl="https://guitar-practice.aziznal.com"
               githubUrl="https://github.com/aziznal/guitar-practice-website"
               text="Guitar practice website (wip)"
             />
-          </ProjectList>
+
+            <TinyLink
+              siteUrl={undefined}
+              githubUrl="https://github.com/aziznal/route-optimizer"
+              text="Visual exploration of path finding algorithms using in python"
+            />
+
+            <TinyLink
+              siteUrl={undefined}
+              githubUrl="https://github.com/aziznal/basic-web-scraper"
+              text="Python library I made containing utilities for web scraping"
+            />
+
+            <TinyLink
+              siteUrl={undefined}
+              githubUrl="https://github.com/aziznal/html-video-player-customizations"
+              text="HTML video player customization, and why you probably shouldn't do it"
+            />
+
+            <TinyLink
+              siteUrl="https://samehnaal.com"
+              githubUrl="https://github.com/aziznal/samehnaal.com"
+              text="Samehnaal.com"
+            />
+          </LinkList>
         </div>
       </section>
     </div>
   )
 }
 
-export function ProjectList(props: PropsWithChildren) {
-  return <div className="ms-4 space-y-2">{props.children}</div>
+export function LinkList(props: PropsWithChildren) {
+  return <div>{props.children}</div>
 }

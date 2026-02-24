@@ -6,7 +6,7 @@ export function PixelatedChevron(props: { className?: string }) {
       className={cn('-rotate-90 size-4 inline-block', props.className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
-      shape-rendering="crispEdges"
+      shapeRendering="crispEdges"
     >
       <rect x="1" y="3" width="2" height="2" />
       <rect x="3" y="5" width="2" height="2" />

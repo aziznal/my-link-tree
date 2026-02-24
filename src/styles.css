@@ -15,7 +15,7 @@
     from var(--color-background) calc(l * 0.9) calc(c * 0.9) h
   );
   --color-decoration: oklch(
-    from var(--color-background) calc(l * 1.4) calc(c * 3) h
+    from var(--color-background) calc(l * 1.6) calc(c * 3) h
   );
 
   --color-card: var(--color-neutral-900);

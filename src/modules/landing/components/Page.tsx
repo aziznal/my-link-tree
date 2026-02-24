@@ -2,7 +2,7 @@ import { Hero } from './Hero'
 import { Menu, SECTIONS } from './Menu'
 import { Projects } from './Projects'
 import { SocialLinks } from './SocialLinks'
-import { Summary } from './Summary'
+import { AboutMe } from './AboutMe'
 import { ThemePicker } from './ThemePicker'
 
 export function LandingPage() {
@@ -18,16 +18,12 @@ export function LandingPage() {
         <ThemePicker />
       </header>
 
-      <main className="flex flex-col items-stretch gap-[12rem] mx-auto w-[min(100%,120ch)] px-8">
-        <div className="h-[40dvh]">
-          <Hero sectionId={SECTIONS[0].id} />{' '}
-        </div>
+      <main className="flex flex-col items-stretch gap-[8rem] mx-auto w-[min(100%,120ch)] px-8">
+        <Hero sectionId={SECTIONS[0].id} />
 
-        <div className="space-y-12">
-          <Summary sectionId={SECTIONS[1].id} />
+        <AboutMe sectionId={SECTIONS[1].id} />
 
-          <SocialLinks />
-        </div>
+        <SocialLinks />
 
         <Projects sectionId={SECTIONS[2].id} />
       </main>
