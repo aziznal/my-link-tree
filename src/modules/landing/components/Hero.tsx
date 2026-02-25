@@ -77,7 +77,7 @@ export function Hero(props: { sectionId: string }) {
           >
             <span />
 
-            <h1 className="text-[5.375rem] text-accent text-shadow-sm text-shadow-accent/30">
+            <h1 className="text-[5.375rem] text-accent">
               <TextType
                 text="Aziz Nal"
                 typingSpeed={35}
@@ -98,7 +98,7 @@ export function Hero(props: { sectionId: string }) {
           >
             <span></span>
 
-            <h1 className="text-[1.75rem] text-accent text-shadow-sm text-shadow-accent/30">
+            <h1 className="text-[1.75rem] text-accent">
               <TextType
                 text="Web Developer - Designer - Huge Nerd"
                 typingSpeed={10}

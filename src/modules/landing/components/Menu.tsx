@@ -4,15 +4,15 @@ import { useEffect, useState } from 'react'
 export const SECTIONS = [
   { id: 'home' },
   { id: 'about' },
-  { id: 'blog' },
   { id: 'projects' },
+  { id: 'blog' },
 ]
 
 export function Menu() {
   const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
 
   /** track active section based on scroll */
-  const HEADER_OFFSET = 200
+  const HEADER_OFFSET = 300
   useEffect(() => {
     const sectionIds = SECTIONS.map((s) => s.id)
 
