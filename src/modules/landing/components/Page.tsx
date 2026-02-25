@@ -4,11 +4,12 @@ import { Projects } from './Projects'
 import { SocialLinks } from './SocialLinks'
 import { AboutMe } from './AboutMe'
 import { ThemePicker } from './ThemePicker'
+import { Blog } from './Blog'
 
 export function LandingPage() {
   return (
     <div className="flex flex-col pb-24 items-stretch">
-      <header className="font-lowres sticky top-0 z-10 flex gap-[3rem] text-[2rem] backdrop-blur-md bg-background/70 p-6 mb-[12rem] items-center justify-between">
+      <header className="font-lowres sticky top-0 z-10 flex gap-[3rem] max-sm:text-[1.3rem] text-[2rem] backdrop-blur-md bg-background/70 p-6 mb-[12rem] items-center justify-between">
         <div />
 
         <div className="flex gap-[2rem] items-center">
@@ -26,6 +27,8 @@ export function LandingPage() {
         <SocialLinks />
 
         <Projects sectionId={SECTIONS[2].id} />
+
+        <Blog sectionId={SECTIONS[3].id} />
       </main>
     </div>
   )

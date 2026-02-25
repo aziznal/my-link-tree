@@ -1,47 +1,56 @@
 import { Title } from '@/lib/components/ui/Headings'
 import { SocialLink } from '@/lib/components/SocialLink'
-import {
-  LucideGithub,
-  LucidePencil,
-  LucideBriefcase,
-  LucideMail,
-  LucideNewspaper,
-} from 'lucide-react'
+import { LucidePencil, LucideMail, LucideNewspaper } from 'lucide-react'
+import { PixelatedLinkedin } from '@/lib/components/icons/PixelatedLinkedin'
+import { PixelatedGithub } from '@/lib/components/icons/PixelatedGithub'
+import { toast } from 'sonner'
+import { PixelatedArticle } from '@/lib/components/icons/PixelatedArticle'
+import { PixelatedPen } from '@/lib/components/icons/PixelatedPen'
 
 export function SocialLinks() {
+  const copyEmailToClipboard = async () => {
+    await navigator.clipboard.writeText('abodenaal@gmail.com')
+    toast.success('Email copied to clipboard', { position: 'bottom-center' })
+  }
+
   return (
     <div>
       <Title>links</Title>
 
       <div className="flex flex-wrap gap-4 lowercase">
-        <SocialLink
-          href="https://github.com/aziznal"
-          className="text-yellow-500"
-        >
-          <LucideGithub size="20" /> Github
-        </SocialLink>
+        <div className="contents" onClick={copyEmailToClipboard}>
+          <SocialLink>
+            <LucideMail size="20" /> abodenaal@gmail.com
+          </SocialLink>
+        </div>
 
-        <SocialLink
-          href="https://medium.com/@aziznal"
-          className="text-neutral-400"
-        >
-          <LucidePencil size="20" /> Medium
-        </SocialLink>
+        <a href="https://github.com/aziznal" rel="noopener" target="_blank">
+          <SocialLink>
+            <PixelatedGithub className="size-5" /> Github
+          </SocialLink>
+        </a>
 
-        <SocialLink
+        <a href="https://medium.com/@aziznal" rel="noopener" target="_blank">
+          <SocialLink>
+            <PixelatedPen className="size-5" /> Medium
+          </SocialLink>
+        </a>
+
+        <a
           href="https://linkedin.com/in/abdulaziz-nal"
-          className="text-blue-500"
+          rel="noopener"
+          target="_blank"
         >
-          <LucideBriefcase size="20" /> LinkedIn
-        </SocialLink>
+          <SocialLink>
+            <PixelatedLinkedin className="size-5" /> LinkedIn
+          </SocialLink>
+        </a>
 
-        <SocialLink href="mailto:abodenaal@gmail.com" className="text-gray-200">
-          <LucideMail size="20" /> Email
-        </SocialLink>
-
-        <SocialLink href="" className="text-gray-200">
-          <LucideNewspaper size="20" /> CV
-        </SocialLink>
+        <a href="" rel="noopener" target="_blank">
+          <SocialLink>
+            <PixelatedArticle className="size-5" /> CV
+          </SocialLink>
+        </a>
       </div>
     </div>
   )

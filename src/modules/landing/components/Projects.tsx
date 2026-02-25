@@ -1,21 +1,19 @@
 import { Subtitle, Title } from '@/lib/components/ui/Headings'
 import { MinorLink } from '@/lib/components/MinorLink'
 import { PropsWithChildren } from 'react'
-import { TinyLink } from '@/lib/components/TinyLink'
+import { ArchiveLink } from '@/lib/components/ArchiveLink'
 
 export function Projects(props: { sectionId: string }) {
   return (
-    <div id={props.sectionId} className="scroll-mt-20 space-y-14">
+    <div id={props.sectionId} className="scroll-mt-20 space-y-8">
       <div>
-        <Title>stuff i've done</Title>
+        <Title>Projects</Title>
       </div>
 
       <section>
-        <Subtitle>applications</Subtitle>
-
         <LinkList>
           <MinorLink
-            siteUrl="finance-manager.aziznal.com"
+            siteUrl="https://finance-manager.aziznal.com"
             githubUrl={undefined}
             text="Finman: personal finance application"
           />
@@ -123,73 +121,73 @@ export function Projects(props: { sectionId: string }) {
 
         <div className="text-muted fill-muted">
           <LinkList>
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://guitar-practice.aziznal.com"
               githubUrl="https://github.com/aziznal/guitar-practice-website"
               text="Guitar practice website (wip)"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://tanstack-forms.aziznal.com"
               githubUrl="https://github.com/aziznal/tanstack-form-examples"
               text="Tanstack forms examples"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://i18n-in-nextjs.aziznal.com"
               githubUrl="https://github.com/aziznal/i18n-in-nextjs15-app-router"
               text="Demo of next-intl"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://design-principles.aziznal.com"
               githubUrl="https://github.com/aziznal/design-principles-comparison"
               text="Interactive design principles"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://custom-themes.aziznal.com"
               githubUrl="https://github.com/aziznal/custom-themes-nextjs"
               text="Custom Themes with Tailwind"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://emoji-picker.aziznal.com"
               githubUrl="https://github.com/aziznal/nextjs-fuzzy-lazy-loading-emoji-picker"
               text="Emoji Picker"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://ne-zaman-askeriyeye-gidiyorsun.aziznal.com"
               githubUrl="https://github.com/aziznal/ne-zaman-askeriyeye-gidiyorsun"
               text="When am I going to my military service?"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://guitar-practice.aziznal.com"
               githubUrl="https://github.com/aziznal/guitar-practice-website"
               text="Guitar practice website (wip)"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl={undefined}
               githubUrl="https://github.com/aziznal/route-optimizer"
               text="Visual exploration of path finding algorithms using in python"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl={undefined}
               githubUrl="https://github.com/aziznal/basic-web-scraper"
               text="Python library I made containing utilities for web scraping"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl={undefined}
               githubUrl="https://github.com/aziznal/html-video-player-customizations"
               text="HTML video player customization, and why you probably shouldn't do it"
             />
 
-            <TinyLink
+            <ArchiveLink
               siteUrl="https://samehnaal.com"
               githubUrl="https://github.com/aziznal/samehnaal.com"
               text="Samehnaal.com"

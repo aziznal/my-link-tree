@@ -1,7 +1,12 @@
 import { cn } from '@/lib/cn'
 import { useEffect, useState } from 'react'
 
-export const SECTIONS = [{ id: 'home' }, { id: 'about' }, { id: 'projects' }]
+export const SECTIONS = [
+  { id: 'home' },
+  { id: 'about' },
+  { id: 'blog' },
+  { id: 'projects' },
+]
 
 export function Menu() {
   const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
@@ -67,8 +72,7 @@ function MenuItem(props: { text: string; isSelected?: boolean }) {
     <p
       className={cn(
         'leading-none px-1',
-        !props.isSelected &&
-          'cursor-pointer',
+        !props.isSelected && 'cursor-pointer',
         props.isSelected && 'bg-foreground text-background',
       )}
     >

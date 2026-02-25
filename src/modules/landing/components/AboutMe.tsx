@@ -1,5 +1,4 @@
 import { Frame } from '@/lib/components/ui/Frame'
-import { Title } from '@/lib/components/ui/Headings'
 
 export function AboutMe(props: { sectionId: string }) {
   const startDate = new Date('2019-01-01')
@@ -7,13 +6,18 @@ export function AboutMe(props: { sectionId: string }) {
     new Date(Date.now()).getFullYear() - startDate.getFullYear()
 
   return (
-    <div id={props.sectionId} className="scroll-mt-20 w-full">
-      <Title>a bit about me</Title>
-
+    <div
+      id={props.sectionId}
+      className="scroll-mt-20 w-full max-w-[70ch] mx-auto"
+    >
       <Frame className="space-y-6 font-mono lowercase backdrop-blur-md">
         <p>
-          I'm Aziz; a web developer with a passion for making things
-          people may possibly one day want to use.
+          I'm Aziz; a{' '}
+          <span className="text-[1.375rem] text-glow-sm text-shadow-primary font-lowres">
+            web developer
+          </span>{' '}
+          with a passion for making things people may possibly one day want to
+          use.
         </p>
 
         <p>
