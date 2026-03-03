@@ -102,7 +102,7 @@ const Component = () => {
           distance,
           0,
           500,
-          CIRCLE_RADIUS * 50,
+          CIRCLE_RADIUS * 25,
           CIRCLE_RADIUS,
         )
 
