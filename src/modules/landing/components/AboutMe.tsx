@@ -10,7 +10,7 @@ export function AboutMe(props: { sectionId: string }) {
       id={props.sectionId}
       className="scroll-mt-20 w-full max-w-[70ch] mx-auto"
     >
-      <Frame className="space-y-6 font-mono lowercase backdrop-blur-md">
+      <Frame className="space-y-6 font-mono lowercase backdrop-blur">
         <p>
           I'm Aziz; a{' '}
           <span className="text-[1.375rem] text-glow-sm text-shadow-primary font-lowres">

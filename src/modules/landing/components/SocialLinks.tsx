@@ -1,6 +1,6 @@
 import { Title } from '@/lib/components/ui/Headings'
 import { SocialLink } from '@/lib/components/SocialLink'
-import { LucidePencil, LucideMail, LucideNewspaper } from 'lucide-react'
+import { LucideMail } from 'lucide-react'
 import { PixelatedLinkedin } from '@/lib/components/icons/PixelatedLinkedin'
 import { PixelatedGithub } from '@/lib/components/icons/PixelatedGithub'
 import { toast } from 'sonner'
@@ -20,7 +20,7 @@ export function SocialLinks() {
       <div className="flex flex-wrap gap-4 lowercase">
         <div className="contents" onClick={copyEmailToClipboard}>
           <SocialLink>
-            <LucideMail size="20" /> abodenaal@gmail.com
+            <LucideMail className="size-5 fill-none" /> abodenaal@gmail.com
           </SocialLink>
         </div>
 

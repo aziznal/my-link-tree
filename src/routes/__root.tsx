@@ -4,6 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import appCss from '../styles.css?url'
 import { Toaster } from '@/lib/components/ui/Toast'
+import { AnimatedBackground } from '@/lib/components/AnimatedBackground'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -42,14 +43,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
 
-      <body
-        style={{
-          backgroundImage:
-            'radial-gradient(circle, var(--color-decoration) 1px, transparent 1px)',
-          backgroundSize: '36px 36px',
-          backgroundPosition: '0 0',
-        }}
-      >
+      <body>
+        <AnimatedBackground />
+
         {children}
 
         <TanStackDevtools

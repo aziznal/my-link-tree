@@ -35,7 +35,7 @@ export function Hero(props: { sectionId: string }) {
       className="flex flex-col items-center scroll-mt-56 w-full"
       id={props.sectionId}
     >
-      <div className="sticky border rounded w-[min(100%,90ch)] backdrop-blur-xs bg-terminal overflow-clip min-h-[25dvh]">
+      <div className="sticky border rounded w-[min(100%,90ch)] backdrop-blur bg-terminal overflow-clip min-h-[25dvh]">
         <div className="bg-secondary px-3 py-0.5 grid grid-cols-3 items-center">
           <div className="flex gap-1">
             <div
