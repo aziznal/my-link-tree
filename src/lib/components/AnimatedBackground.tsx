@@ -71,7 +71,7 @@ const Component = () => {
       circle.springRadius.on('change', (v) =>
         circle.element.setAttribute(
           'r',
-          `${clamp(0, Number.POSITIVE_INFINITY, v)}`,
+          `${clamp(CIRCLE_RADIUS, Number.POSITIVE_INFINITY, v)}`,
         ),
       )
     })
