@@ -51,7 +51,7 @@ export function Projects(props: { sectionId: string }) {
       </section>
 
       <section>
-        <Subtitle>concepts</Subtitle>
+        <Subtitle className="text-muted">concepts</Subtitle>
 
         <LinkList>
           <MinorLink
@@ -69,7 +69,7 @@ export function Projects(props: { sectionId: string }) {
       </section>
 
       <section>
-        <Subtitle>components</Subtitle>
+        <Subtitle className="text-muted">components</Subtitle>
 
         <LinkList>
           <MinorLink
@@ -87,7 +87,7 @@ export function Projects(props: { sectionId: string }) {
       </section>
 
       <section>
-        <Subtitle>random fun</Subtitle>
+        <Subtitle className="text-muted">random fun</Subtitle>
 
         <LinkList>
           <MinorLink
@@ -117,7 +117,7 @@ export function Projects(props: { sectionId: string }) {
       </section>
 
       <section>
-        <h2 className="font-lowres text-2xl mb-4">archive</h2>
+        <h2 className="font-lowres text-2xl mb-4 text-muted">archive</h2>
 
         <div className="text-muted fill-muted">
           <LinkList>
