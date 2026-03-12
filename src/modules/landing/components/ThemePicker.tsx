@@ -3,7 +3,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/lib/components/ui/Pop
 import { useRef, useState } from 'react'
 
 type Theme = {
-  id: 'main' | 'gray' | 'purple'
+  id: 'main' | 'blue' | 'purple'
   primary: string
   accent: string
 }
@@ -11,13 +11,14 @@ type Theme = {
 const themes: Record<Theme['id'], Theme> = {
   main: {
     id: 'main',
-    primary: 'oklch(54.6% 0.245 262.881)',
-    accent: 'oklch(64.6% 0.222 41.116)',
-  },
-  gray: {
-    id: 'gray',
     primary: '#585c63',
     accent: 'oklch(76.8% 0.233 130.85)',
+  },
+
+  blue: {
+    id: 'blue',
+    primary: 'oklch(54.6% 0.245 262.881)',
+    accent: 'oklch(64.6% 0.222 41.116)',
   },
 
   purple: {
@@ -67,9 +68,9 @@ export function ThemePicker() {
             />
 
             <ThemePreset
-              themeId="gray"
-              isSelected={selectedTheme?.id === 'gray'}
-              onClick={() => selectTheme(themes['gray'])}
+              themeId="blue"
+              isSelected={selectedTheme?.id === 'blue'}
+              onClick={() => selectTheme(themes['blue'])}
             />
 
             <ThemePreset

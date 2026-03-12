@@ -2,8 +2,10 @@
 @import 'tw-animate-css';
 
 @theme {
-  --color-primary: var(--color-blue-600);
+  --color-primary: #585c63;
   --color-primary-foreground: oklch(from var(--color-primary) calc(l * 1.3) c h);
+
+  --color-accent: oklch(76.8% 0.233 130.85);
 
   --color-background: oklch(
     from var(--color-primary) calc(l * 0.35) calc(c * 0.1) h
@@ -30,8 +32,6 @@
   --color-muted: var(--color-neutral-500);
   --color-muted-foreground: var(--color-neutral-400);
 
-  --color-accent: var(--color-orange-600);
-  --color-accent-foreground: var(--color-orange-300);
 
   --color-destructive: oklch(from var(--color-red-500) calc(l + 0.025) c h);
   --color-destructive-foreground: var(--color-foreground);
