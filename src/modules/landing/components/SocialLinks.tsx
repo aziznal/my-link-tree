@@ -1,6 +1,6 @@
 import { Title } from '@/lib/components/ui/Headings'
 import { SocialLink } from '@/lib/components/SocialLink'
-import { LucideMail } from 'lucide-react'
+import { LucideCheck, LucideCopy, LucideMail } from 'lucide-react'
 import { PixelatedLinkedin } from '@/lib/components/icons/PixelatedLinkedin'
 import { PixelatedGithub } from '@/lib/components/icons/PixelatedGithub'
 import { toast } from 'sonner'
@@ -18,33 +18,45 @@ export function SocialLinks() {
       <Title>links</Title>
 
       <div className="flex flex-wrap gap-4 lowercase">
-        <div className="cursor-pointer" onClick={copyEmailToClipboard}>
+        <div
+          className="cursor-pointer group/email"
+          onClick={copyEmailToClipboard}
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (!['Enter', ' '].includes(e.key)) return
+            e.preventDefault()
+            e.stopPropagation()
+            copyEmailToClipboard()
+          }}
+        >
           <SocialLink>
-            <LucideMail className="size-5 fill-none" /> abodenaal@gmail.com
+            <LucideMail className="size-5 fill-none text-muted" /> abodenaal at gmail dot com{' '}
+            <LucideCopy className="fill-none size-4 group-focus-within/email:hidden" />
+            <LucideCheck className="hidden fill-none size-4 text-green-500 group-focus-within/email:inline" />
           </SocialLink>
         </div>
 
         <a href="https://github.com/aziznal" rel="noopener" target="_blank">
           <SocialLink>
-            <PixelatedGithub className="size-5" /> Github
+            <PixelatedGithub className="size-5 text-muted" /> Github
           </SocialLink>
         </a>
 
         <a href="https://medium.com/@aziznal" rel="noopener" target="_blank">
           <SocialLink>
-            <PixelatedPen className="size-5" /> Medium
+            <PixelatedPen className="size-5 text-muted" /> Medium
           </SocialLink>
         </a>
 
         <a href="https://linkedin.com/in/abdulaziz-nal" rel="noopener" target="_blank">
           <SocialLink>
-            <PixelatedLinkedin className="size-5" /> LinkedIn
+            <PixelatedLinkedin className="size-5 text-muted" /> LinkedIn
           </SocialLink>
         </a>
 
         <a href="" rel="noopener" target="_blank">
           <SocialLink>
-            <PixelatedArticle className="size-5" /> CV
+            <PixelatedArticle className="size-5 text-muted" /> CV
           </SocialLink>
         </a>
       </div>
