@@ -2,6 +2,7 @@
 - [x] write summary. "i am a developer who enjoys making cool components and animations in his spare time"
 - [x] archive old / irrelevant stuff
 - [x] Add favicon
+- [x] Articles section
 - [ ] make little garden for shiro on bottom
 - [ ] link cv
 - [ ] embed my project graveyard - port it here as a section
@@ -26,5 +27,4 @@
 - [ ] add section for my nerdy stuff: linux, neovim, home automation, keyboard shortcuts, etc.
   - [ ] add my configs on github
 
-- [ ] Articles section
 

@@ -39,7 +39,7 @@ export function Projects(props: { sectionId: string }) {
           <MinorLink
             siteUrl={undefined}
             githubUrl={undefined}
-            text="The Middleman: App for connecting syrians looking for handymen, doctors, and more"
+            text="The Middleman: App for connecting arabic speakers looking for handymen, doctor clinics, and more"
           />
 
           <MinorLink
