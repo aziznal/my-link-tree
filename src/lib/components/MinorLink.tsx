@@ -13,7 +13,7 @@ export function MinorLink({
 }) {
   return (
     <div className="font-lowres flex text-[1.675rem] gap-2 leading-none hover:bg-foreground/10">
-      <PixelatedChevron className="group-hover:fill-background fill-foreground shrink-0 mt-[.3125rem]" />
+      <PixelatedChevron className="group-hover:fill-background fill-foreground shrink-0 mt-[.375rem]" />
 
       <div className="space-x-2 inline">
         <span>{text}</span>

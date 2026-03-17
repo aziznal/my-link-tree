@@ -13,7 +13,7 @@ export function ArchiveLink({
 }) {
   return (
     <div className="font-lowres flex text-[1.375rem] gap-2 leading-none hover:bg-foreground/10">
-      <PixelatedChevron className="group-hover:fill-background size-3 mt-[.3125rem]" />
+      <PixelatedChevron className="group-hover:fill-background size-3 mt-[.5rem]" />
 
       <div className="space-x-2 inline">
         <span>{text}</span>

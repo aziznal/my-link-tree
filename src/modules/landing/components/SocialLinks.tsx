@@ -18,7 +18,7 @@ export function SocialLinks() {
       <Title>links</Title>
 
       <div className="flex flex-wrap gap-4 lowercase">
-        <div className="contents" onClick={copyEmailToClipboard}>
+        <div className="cursor-pointer" onClick={copyEmailToClipboard}>
           <SocialLink>
             <LucideMail className="size-5 fill-none" /> abodenaal@gmail.com
           </SocialLink>
@@ -36,11 +36,7 @@ export function SocialLinks() {
           </SocialLink>
         </a>
 
-        <a
-          href="https://linkedin.com/in/abdulaziz-nal"
-          rel="noopener"
-          target="_blank"
-        >
+        <a href="https://linkedin.com/in/abdulaziz-nal" rel="noopener" target="_blank">
           <SocialLink>
             <PixelatedLinkedin className="size-5" /> LinkedIn
           </SocialLink>
