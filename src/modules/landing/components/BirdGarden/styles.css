@@ -1,0 +1,63 @@
+@keyframes parallax {
+  from {
+    transform: translateY(var(--from));
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .parallax {
+    animation: parallax linear both;
+    animation-timeline: view();
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 4px white;
+  }
+  to {
+    text-shadow: 0px 0px 12px white;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .stars {
+    animation:
+      parallax linear both,
+      glow 5s ease-in-out alternate infinite;
+    animation-timeline: view();
+  }
+}
+
+@keyframes blow-in-breeze {
+  0% {
+    transform: skewX(-3deg);
+  }
+  25% {
+    transform: skewX(-2deg);
+  }
+  50% {
+    transform: skewX(1deg);
+  }
+  75% {
+    transform: skewX(-2deg);
+  }
+  100% {
+    transform: skewX(3deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blow-in-breeze {
+    transform-origin: bottom center;
+    animation: blow-in-breeze 8s ease-in-out alternate infinite;
+  }
+}
+
+@keyframes hover {
+  to {
+    transform: translateY(0.4em);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hover {
+    animation: hover 5s ease-in-out alternate infinite;
+  }
+}
