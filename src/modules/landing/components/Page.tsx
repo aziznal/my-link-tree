@@ -1,6 +1,6 @@
 import { Hero } from './Hero'
 import { Menu, SECTIONS } from './Menu'
-import { Projects } from './Projects'
+import { Projects } from './Projects/Projects'
 import { SocialLinks } from './SocialLinks'
 import { AboutMe } from './AboutMe'
 import { ThemePicker } from './ThemePicker'

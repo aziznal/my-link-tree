@@ -54,7 +54,7 @@ export function SocialLinks() {
           </SocialLink>
         </a>
 
-        <a href="" rel="noopener" target="_blank">
+        <a href="/CV.pdf" rel="noopener" target="_blank">
           <SocialLink>
             <PixelatedArticle className="size-5 text-muted" /> CV
           </SocialLink>

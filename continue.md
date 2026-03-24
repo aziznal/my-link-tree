@@ -12,14 +12,16 @@
   - fancy stuff / showcases
 - [x] fix project images flicker (something about priority / lazy prop for img element)
 
-- [ ] make little garden for shiro on bottom
-- [ ] embed my project graveyard - port it here as a section
+- [x] make little garden for shiro on bottom
 
-- [ ] there are actually some cool projects I could add to a components showcase in the graveyard
-- [ ] Add finman to my projects
-- [ ] add udao
+- [x] Add finman to my projects
+- [x] add udao
 - [ ] add 30 lang binary tree project (as a joke mostly)
 - [ ] use gifs for projects
+- [ ] pics or it didn't happen: add more pics to things like components etc. (or prefereably gifs)
+
+- [ ] there are actually some cool projects I could add to a components showcase in the graveyard
+- [ ] embed my project graveyard - port it here as a section
 
 - [ ] fidgeting area (with sfx!)
 

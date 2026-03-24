@@ -17,7 +17,7 @@ export function AboutMe(props: { sectionId: string }) {
           I've been a developer for the last {elapsedYears} years. I've worked professionally as a{' '}
           <span className="text-[1.375rem] text-glow-sm text-shadow-primary font-lowres">Senior developer</span>™ and{' '}
           <span className="text-[1.375rem] text-glow-sm text-shadow-primary font-lowres">Team Lead</span>. See{' '}
-          <a href="/CV.pdf" target="_blank" className="underline">
+          <a href="/CV.pdf" target="_blank" className="underline bg-foreground text-background py-0.5 px-2">
             my CV
           </a>{' '}
           for details.

@@ -29,19 +29,19 @@
 
 @keyframes blow-in-breeze {
   0% {
-    transform: skewX(-3deg);
+    transform: skewX(-5deg);
   }
   25% {
-    transform: skewX(-2deg);
+    transform: skewX(3deg);
   }
   50% {
-    transform: skewX(1deg);
+    transform: skewX(-4deg);
   }
   75% {
-    transform: skewX(-2deg);
+    transform: skewX(3deg);
   }
   100% {
-    transform: skewX(3deg);
+    transform: skewX(-5deg);
   }
 }
 @media (prefers-reduced-motion: no-preference) {

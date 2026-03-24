@@ -15,13 +15,13 @@ export function Projects(props: { sectionId: string }) {
           <MinorLink
             siteUrl="https://finance-manager.aziznal.com"
             githubUrl={undefined}
-            text="Finman: personal finance application"
+            text="Finman: personal finance application for power users"
           />
 
           <MinorLink
             siteUrl="https://skillsvalley.io"
             githubUrl={undefined}
-            text="SkillsValley: Skills-based job matching"
+            text="SkillsValley: Skills-based recruiting & job matching"
           />
 
           <MinorLink
