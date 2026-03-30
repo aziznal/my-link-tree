@@ -1,7 +1,8 @@
 import { Subtitle, Title } from '@/lib/components/ui/Headings'
-import { MinorLink } from '@/lib/components/MinorLink'
+import { MinorLink } from '@/modules/landing/components/Projects/MinorLink'
 import { PropsWithChildren } from 'react'
-import { ArchiveLink } from '@/lib/components/ArchiveLink'
+import { ArchiveLink } from '@/modules/landing/components/Projects/ArchiveLink'
+import { ProjectShowcase } from './Project'
 
 export function Projects(props: { sectionId: string }) {
   return (
@@ -10,44 +11,82 @@ export function Projects(props: { sectionId: string }) {
         <Title>Projects</Title>
       </div>
 
-      <section>
-        <LinkList>
-          <MinorLink
-            siteUrl="https://finance-manager.aziznal.com"
-            githubUrl={undefined}
-            text="Finman: personal finance application for power users"
-          />
+      <section
+        className="grid grid-flow-dense grid-cols-[repeat(auto-fit,_minmax(min(100%,300px),1fr))] gap-6"
+        style={{ containerType: 'inline-size' }}
+      >
+        <ProjectShowcase
+          title={<span className="text-emerald-500">Finman</span>}
+          subtitle="Finman: personal finance application for power users"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti eum at alias quaerat beatae ipsam, et voluptatibus necessitatibus vero."
+          tech={['postgres', 'drizzle', 'RLS', 'typescript', 'coolify', 'tanstack start']}
+          siteLink="https://finance-manager.aziznal.com"
+          githubLink={undefined}
+          imageSrc=""
+          sourceModel="closed"
+        />
 
-          <MinorLink
-            siteUrl="https://skillsvalley.io"
-            githubUrl={undefined}
-            text="SkillsValley: Skills-based recruiting & job matching"
-          />
+        <ProjectShowcase
+          title={
+            <span className="bg-clip-text text-transparent bg-[linear-gradient(to_bottom,#777777_45%,#DD0000_45%,#DD0000_66.66%,#FFCE00_66.66%)]">
+              German Docs
+            </span>
+          }
+          subtitle="German language reference"
+          description="half-parody nestjs docs site clone I made to document my german learning and to use as a reference. Includes custom-implemented markdown-to-webpage preprocessing and cmd-k fuzzy search."
+          siteLink="https://german-docs.aziznal.com"
+          githubLink="https://github.com/aziznal/german-docs"
+          tech={['next.js', 'markdown', 'remark', 'fuse.js']}
+          imageSrc=""
+          sourceModel="open"
+        />
 
-          <MinorLink
-            siteUrl="https://german-docs.aziznal.com"
-            githubUrl="https://github.com/aziznal/german-docs"
-            text="German Docs"
-          />
+        <ProjectShowcase
+          title="Dart Import Sorter"
+          subtitle="VSCode Extension with 12K+ downloads"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti eum at alias quaerat beatae ipsam, et voluptatibus necessitatibus vero."
+          siteLink="https://marketplace.visualstudio.com/items?itemName=aziznal.dart-import-sorter"
+          githubLink="https://github.com/aziznal/dart-import-sorter"
+          sourceModel="open"
+          imageSrc=""
+          tech={['typescript', 'regex']}
+        />
 
-          <MinorLink
-            siteUrl="https://marketplace.visualstudio.com/items?itemName=aziznal.dart-import-sorter"
-            githubUrl="https://github.com/aziznal/dart-import-sorter"
-            text="VSCode Extension: Dart import sorter (12K+ downloads)"
-          />
+        <ProjectShowcase
+          title={<span className="text-[#5d3ebd]">The Middleman App</span>}
+          subtitle="App for arabic speakers to find services"
+          description="A mobile app and website for connecting arabic speakers looking for handymen, doctor clinics, and more. This was a friend's idea that we collaborated on until we couldn't sustain development after work hours."
+          siteLink={undefined}
+          githubLink={undefined}
+          tech={['firebase', 'google cloud functions', 'typescript', 'dart', 'flutter', 'angular', 'rx.js']}
+          imageSrc=""
+          sourceModel="closed"
+        />
 
-          <MinorLink
-            siteUrl={undefined}
-            githubUrl={undefined}
-            text="The Middleman: App for connecting arabic speakers looking for handymen, doctor clinics, and more"
-          />
-
-          <MinorLink
-            siteUrl="https://tax-calc.aziznal.com"
-            githubUrl="https://github.com/aziznal/tax-calc"
-            text="Tax Calculator"
-          />
-        </LinkList>
+        <ProjectShowcase
+          title="Udao SkillsValley"
+          subtitle="SkillsValley: Skills-based recruiting & job matching"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti eum at alias quaerat beatae ipsam, et voluptatibus necessitatibus vero."
+          sourceModel="closed"
+          imageSrc=""
+          tech={[
+            'supabase',
+            'vercel',
+            'cloudflare',
+            'google cloud',
+            'next.js',
+            'stripe',
+            'mux',
+            'posthog',
+            'algolia',
+            'i18next',
+            'playwright',
+            'react-email',
+            'recharts',
+          ]}
+          siteLink="https://skillsvalley.io"
+          githubLink={undefined}
+        />
       </section>
 
       <section>
@@ -112,6 +151,12 @@ export function Projects(props: { sectionId: string }) {
             siteUrl="https://thai-number-generator.aziznal.com/"
             githubUrl="https://github.com/aziznal/thai-number-generator"
             text="Thai Number Generator"
+          />
+
+          <MinorLink
+            siteUrl="https://tax-calc.aziznal.com"
+            githubUrl="https://github.com/aziznal/tax-calc"
+            text="Tax Calculator"
           />
         </LinkList>
       </section>

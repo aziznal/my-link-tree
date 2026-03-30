@@ -1,4 +1,4 @@
-import { ReactNode, useId } from 'react'
+import { useId } from 'react'
 import { cn } from '@/lib/cn'
 import { LucideExternalLink, LucideImage } from 'lucide-react'
 import { Link } from '@tanstack/react-router'
@@ -6,12 +6,12 @@ import { Link } from '@tanstack/react-router'
 export function ProjectLink({
   imageSrc,
   description,
-  children,
+  title,
   href,
   className,
   techTags = [],
 }: {
-  children: ReactNode
+  title: string
   description: string
   href: string
   className?: string
@@ -47,13 +47,9 @@ export function ProjectLink({
 
       <div className="flex flex-col gap-3 p-3 h-full justify-between">
         <div className="flex flex-col gap-3">
-          <span className="text-2xl text-balance font-lowres text-glow-sm duration-300 font-bold">
-            {children}
-          </span>
+          <span className="text-2xl text-balance font-lowres text-glow-sm duration-300 font-bold">{title}</span>
 
-          <p className="text-balance text-muted-foreground text-sm">
-            {description}
-          </p>
+          <p className="text-balance text-muted-foreground text-sm">{description}</p>
 
           {techTags.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-4">
@@ -73,7 +69,7 @@ export function ProjectLink({
           )}
         </div>
 
-        <LucideExternalLink className="shrink-0 self-end justify-self-end" />
+        <LucideExternalLink className="shrink-0 self-end justify-self-end fill-none" />
       </div>
     </Link>
   )

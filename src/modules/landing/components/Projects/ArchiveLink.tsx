@@ -1,6 +1,6 @@
-import { PixelatedChevron } from './icons/PixelatedChevron'
-import { PixelatedExternalLink } from './icons/PixelatedExternalLink'
-import { PixelatedGithub } from './icons/PixelatedGithub'
+import { PixelatedChevron } from "@/lib/components/icons/PixelatedChevron"
+import { PixelatedExternalLink } from "@/lib/components/icons/PixelatedExternalLink"
+import { PixelatedGithub } from "@/lib/components/icons/PixelatedGithub"
 
 export function ArchiveLink({
   siteUrl,
