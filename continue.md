@@ -17,7 +17,6 @@
 - [x] Add finman to my projects
 - [x] add udao
 - [ ] add 30 lang binary tree project (as a joke mostly)
-- [ ] use gifs for projects
 - [ ] pics or it didn't happen: add more pics to things like components etc. (or prefereably gifs)
 
 - [ ] there are actually some cool projects I could add to a components showcase in the graveyard
@@ -28,3 +27,7 @@
 - [ ] add section for my nerdy stuff: linux, neovim, home automation, keyboard shortcuts, etc.
   - [ ] add my configs on github
 
+- [ ] issues
+  - [ ] blog articles not obvious as links
+
+- [ ] use gifs for projects

@@ -1,8 +1,8 @@
+import { ProjectShowcase } from './Project'
+import type { PropsWithChildren } from 'react'
 import { Subtitle, Title } from '@/lib/components/ui/Headings'
 import { MinorLink } from '@/modules/landing/components/Projects/MinorLink'
-import { PropsWithChildren } from 'react'
 import { ArchiveLink } from '@/modules/landing/components/Projects/ArchiveLink'
-import { ProjectShowcase } from './Project'
 
 export function Projects(props: { sectionId: string }) {
   return (
@@ -18,12 +18,48 @@ export function Projects(props: { sectionId: string }) {
         <ProjectShowcase
           title={<span className="text-emerald-500">Finman</span>}
           subtitle="Finman: personal finance application for power users"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti eum at alias quaerat beatae ipsam, et voluptatibus necessitatibus vero."
+          description="A simple but customizable personal finance dashboard to track income, payments, subscriptions, installments, and more. You can create views with combinations of filters and sortings to make your perfect dashboard. Also tracks currency exchange rates."
           tech={['postgres', 'drizzle', 'RLS', 'typescript', 'coolify', 'tanstack start']}
           siteLink="https://finance-manager.aziznal.com"
           githubLink={undefined}
           imageSrc=""
           sourceModel="closed"
+        />
+
+        <ProjectShowcase
+          title={<span className="text-[#5d3ebd]">The Middleman App</span>}
+          subtitle="App for arabic speakers to find services"
+          description="A mobile app and website for connecting arabic speakers looking for handymen, doctor clinics, and more. This was a friend's idea that we collaborated on until we couldn't sustain development after work hours."
+          siteLink={undefined}
+          githubLink={undefined}
+          tech={['firebase', 'google cloud functions', 'typescript', 'dart', 'flutter', 'angular', 'rx.js']}
+          imageSrc=""
+          sourceModel="closed"
+        />
+
+        <ProjectShowcase
+          title="Udao SkillsValley"
+          subtitle="SkillsValley: Skills-based recruiting & job matching"
+          description="A platform for talent acquisition and management, as well as recruiting platform with an ATS, the ability to publish job internal or public job posts, create internal courses, and apply to jobs with a skill-based recommendation engine"
+          sourceModel="closed"
+          imageSrc=""
+          tech={[
+            'supabase',
+            'vercel',
+            'cloudflare',
+            'google cloud',
+            'next.js',
+            'stripe',
+            'mux',
+            'posthog',
+            'algolia',
+            'i18next',
+            'playwright',
+            'react-email',
+            'recharts',
+          ]}
+          siteLink="https://skillsvalley.io"
+          githubLink={undefined}
         />
 
         <ProjectShowcase
@@ -44,48 +80,12 @@ export function Projects(props: { sectionId: string }) {
         <ProjectShowcase
           title="Dart Import Sorter"
           subtitle="VSCode Extension with 12K+ downloads"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti eum at alias quaerat beatae ipsam, et voluptatibus necessitatibus vero."
+          description="IDE extension to help you determine what a file does at a glance by looking at an organized set of the imports. Accepts RegEx rules with subgrouping allowing highly customizable import sorting."
           siteLink="https://marketplace.visualstudio.com/items?itemName=aziznal.dart-import-sorter"
           githubLink="https://github.com/aziznal/dart-import-sorter"
           sourceModel="open"
           imageSrc=""
           tech={['typescript', 'regex']}
-        />
-
-        <ProjectShowcase
-          title={<span className="text-[#5d3ebd]">The Middleman App</span>}
-          subtitle="App for arabic speakers to find services"
-          description="A mobile app and website for connecting arabic speakers looking for handymen, doctor clinics, and more. This was a friend's idea that we collaborated on until we couldn't sustain development after work hours."
-          siteLink={undefined}
-          githubLink={undefined}
-          tech={['firebase', 'google cloud functions', 'typescript', 'dart', 'flutter', 'angular', 'rx.js']}
-          imageSrc=""
-          sourceModel="closed"
-        />
-
-        <ProjectShowcase
-          title="Udao SkillsValley"
-          subtitle="SkillsValley: Skills-based recruiting & job matching"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corrupti eum at alias quaerat beatae ipsam, et voluptatibus necessitatibus vero."
-          sourceModel="closed"
-          imageSrc=""
-          tech={[
-            'supabase',
-            'vercel',
-            'cloudflare',
-            'google cloud',
-            'next.js',
-            'stripe',
-            'mux',
-            'posthog',
-            'algolia',
-            'i18next',
-            'playwright',
-            'react-email',
-            'recharts',
-          ]}
-          siteLink="https://skillsvalley.io"
-          githubLink={undefined}
         />
       </section>
 
