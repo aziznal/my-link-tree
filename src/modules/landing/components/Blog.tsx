@@ -1,6 +1,3 @@
-import { Title } from '@/lib/components/ui/Headings'
-import { PropsWithChildren } from 'react'
-import { ArticleLink } from '@/lib/components/ArticleLink'
 import { Slackbot } from './Words/Slackbot'
 import { VSCode } from './Words/VSCode'
 import { Vim } from './Words/Vim'
@@ -9,6 +6,9 @@ import { Npm } from './Words/Npm'
 import { Angular } from './Words/Angular'
 import { Dart } from './Words/Dart'
 import { Flutter } from './Words/Flutter'
+import type { PropsWithChildren } from 'react'
+import { ArticleLink } from '@/lib/components/ArticleLink'
+import { Title } from '@/lib/components/ui/Headings'
 
 export function Blog(props: { sectionId: string }) {
   return (

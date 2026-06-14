@@ -6,6 +6,7 @@ import { AboutMe } from './AboutMe'
 import { ThemePicker } from './ThemePicker'
 import { Blog } from './Blog'
 import { BirdGarden } from './BirdGarden/BirdGarden'
+import { Fidgets } from './Fidgets'
 
 export function LandingPage() {
   return (
@@ -30,6 +31,8 @@ export function LandingPage() {
         <Projects sectionId={SECTIONS[2].id} />
 
         <Blog sectionId={SECTIONS[3].id} />
+
+        <Fidgets />
       </main>
 
       <div
