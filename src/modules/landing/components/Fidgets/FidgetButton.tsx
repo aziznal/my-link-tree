@@ -1,47 +1,42 @@
+import * as Tone from 'tone'
 import { cn } from '@/lib/cn'
+import { Resources } from '@/lib/resources'
+import { randomFloat } from '@/lib/random'
 
-const clickDownSound = new Audio('/audio/click-sound-down.mp3')
-clickDownSound.preload = 'auto'
-
-const clickUpSound = new Audio('/audio/click-sound-up.mp3')
-clickUpSound.preload = 'auto'
+const clickDownSound = new Tone.Player(Resources.audio.clickDown).toDestination()
+const clickUpSound = new Tone.Player(Resources.audio.clickUp).toDestination()
 
 const themes = {
   red: {
     shadow: 'shadow-red-950',
     buttonBg: 'bg-rose-500',
-    buttonHoverBg: 'hover:bg-rose-400',
     buttonText: 'text-rose-950',
   },
   green: {
     shadow: 'shadow-emerald-950',
     buttonBg: 'bg-emerald-500',
-    buttonHoverBg: 'hover:bg-emerald-400',
     buttonText: 'text-emerald-950',
   },
   yellow: {
     shadow: 'shadow-amber-950',
     buttonBg: 'bg-amber-500',
-    buttonHoverBg: 'hover:bg-amber-400',
     buttonText: 'text-amber-950',
   },
   blue: {
     shadow: 'shadow-blue-950',
     buttonBg: 'bg-blue-500',
-    buttonHoverBg: 'hover:bg-blue-400',
     buttonText: 'text-blue-950',
   },
 }
 
 export function FidgetButton(props: { children?: React.ReactNode; theme: keyof typeof themes }) {
   const handleClickDown = () => {
-    clickDownSound.currentTime = 0
-    clickDownSound.play()
+    clickDownSound.playbackRate = randomFloat(0.85, 1.1)
+    clickDownSound.start(0)
   }
 
   const handleClickUp = () => {
-    clickUpSound.currentTime = 0
-    clickUpSound.play()
+    clickUpSound.start(0)
   }
 
   return (
@@ -61,7 +56,6 @@ export function FidgetButton(props: { children?: React.ReactNode; theme: keyof t
           'transition-all rounded-full cursor-pointer font-bold p-6',
           themes[props.theme].buttonBg,
           themes[props.theme].buttonText,
-          `hover:${themes[props.theme].buttonHoverBg}`,
         )}
         onPointerDown={handleClickDown}
         onPointerUp={handleClickUp}
