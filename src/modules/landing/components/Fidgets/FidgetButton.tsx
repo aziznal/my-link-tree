@@ -29,10 +29,11 @@ const themes = {
   },
 }
 
-export function FidgetButton(props: { children?: React.ReactNode; theme: keyof typeof themes }) {
+export function FidgetButton(props: { children?: React.ReactNode; theme: keyof typeof themes; onClick?: () => void }) {
   const handleClickDown = () => {
     clickDownSound.playbackRate = randomFloat(0.85, 1.1)
     clickDownSound.start(0)
+    props.onClick?.()
   }
 
   const handleClickUp = () => {

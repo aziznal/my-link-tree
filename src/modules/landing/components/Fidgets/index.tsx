@@ -1,3 +1,4 @@
+import { CRTDisplay } from './CRTDisplay'
 import { FidgetButton } from './FidgetButton'
 import { KeyboardButton } from './KeyboardButton'
 import { Title } from '@/lib/components/ui/Headings'
@@ -23,6 +24,10 @@ export function Fidgets() {
           <KeyboardButton>R</KeyboardButton>
           <KeyboardButton>T</KeyboardButton>
           <KeyboardButton>Y</KeyboardButton>
+        </section>
+
+        <section>
+          <CRTDisplay />
         </section>
       </div>
     </div>
