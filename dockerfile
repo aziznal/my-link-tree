@@ -2,15 +2,14 @@
 FROM node:22.12.0-slim AS base
 WORKDIR /app
 
-# corepack for pnpm (version on package.json)
-RUN apt-get update && apt-get install -y git curl ca-certificates bash && \
-    npm install -g corepack@0.34.5 && \
-    corepack enable
+RUN apt-get update && apt-get install -y git curl ca-certificates bash
+
+# note: maintaining by hand because I like to live dangerously
+RUN npm install -g pnpm@12.8.2
 
 FROM base AS build
 
-COPY package.json pnpm-lock.yaml ./
-RUN corepack install
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
